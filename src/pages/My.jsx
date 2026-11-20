@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import PrivacyNote from '../components/PrivacyNote.jsx';
 import ProfileForm from '../components/ProfileForm.jsx';
 import { getProfile, saveProfile } from '../lib/storage.js';
 
@@ -22,6 +24,8 @@ export default function My() {
       <p className="muted">프로필은 내 폰에만 저장되고 서버에 남지 않아요.</p>
       {saved && <p className="toast" role="status">저장됐어요 ✓</p>}
       <ProfileForm key={formKey} initial={profile ?? undefined} showLanguage submitLabel="수정 내용 저장" onSubmit={handleSubmit} />
+      <PrivacyNote variant="profile" />
+      <Link to="/demo" className="link demo-link">🎬 데모 모드 (프로필별 카드 비교)</Link>
     </div>
   );
 }

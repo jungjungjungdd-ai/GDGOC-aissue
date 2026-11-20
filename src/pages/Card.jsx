@@ -3,12 +3,7 @@ import { Link, Navigate, useLocation, useNavigate, useParams } from 'react-route
 import { loadAlert } from '../lib/alerts.js';
 import { loadCard } from '../lib/card.js';
 import { getProfile } from '../lib/storage.js';
-
-const SECTIONS = [
-  { key: 'now', title: '지금 바로', icon: '🚨', className: 'sec-now' },
-  { key: 'within10Minutes', title: '10분 안에', icon: '⏱️', className: 'sec-soon' },
-  { key: 'doNot', title: '하지 마세요', icon: '❌', className: 'sec-dont' },
-];
+import { SECTIONS } from '../lib/cardSections.js';
 
 export default function Card() {
   const { id } = useParams();
