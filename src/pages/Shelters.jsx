@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { getProfile } from '../lib/storage.js';
 import { loadAlert } from '../lib/alerts.js';
 import { loadShelters, formatDistance, DATA_SOURCE } from '../lib/shelters.js';
+import { savePendingShare } from '../lib/offline.js';
 
 function getCoords() {
   return new Promise((resolve) => {
@@ -57,6 +58,11 @@ export default function Shelters() {
 
   const doShare = async () => {
     const text = shareMessage(sharing);
+    // 인터넷이 끊겨 있으면 연결이 돌아왔을 때 다시 보낼 수 있게 저장 (문자는 지금도 갈 수 있어서 공유창은 그대로 띄움)
+    if (!navigator.onLine) {
+      savePendingShare(text);
+      setToast('인터넷이 끊겨 있어요. 연결되면 다시 보낼 수 있게 저장했어요.');
+    }
     try {
       if (navigator.share) {
         await navigator.share({ title: '대피 알림', text });

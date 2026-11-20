@@ -9,6 +9,7 @@ import Card from './pages/Card.jsx';
 import Shelters from './pages/Shelters.jsx';
 import My from './pages/My.jsx';
 import Demo from './pages/Demo.jsx';
+import Offline from './pages/Offline.jsx';
 import RequireProfile from './components/RequireProfile.jsx';
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/alerts" element={<Alerts />} />
         <Route path="/shelters" element={<Shelters />} />
         <Route path="/my" element={<My />} />
+        <Route path="/offline" element={<Offline />} />
       </Route>
 
       {/* 하단 탭이 없는 화면 (온보딩, 재난 상황) */}

@@ -1,4 +1,5 @@
 import { createCard } from './api.js';
+import { getOfflineBundle } from './storage.js';
 import fallbackData from '../../data/fallback-cards.json';
 
 const FALLBACKS = fallbackData.fallbackCards ?? fallbackData;
@@ -38,6 +39,9 @@ export async function loadCard(alert, profile, location) {
     const card = await createCard(alert.id, profileToSend, location);
     return normalize(card);
   } catch (error) {
+    // 미리 저장해 둔 맞춤 카드가 있으면 그걸 먼저 (오프라인 대비, 이슈 #20)
+    const saved = getOfflineBundle()?.cards?.[alert.disasterType];
+    if (saved) return { ...saved, offline: true };
     const card = getLocalFallbackCard(alert.disasterType);
     if (card && import.meta.env.DEV) card.debugReason = 'API 요청 실패: ' + (error?.message ?? error);
     return card;
