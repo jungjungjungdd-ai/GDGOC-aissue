@@ -1,0 +1,124 @@
+{
+  "fallbackCards": {
+    "heavy_rain": {
+      "id": "fallback_heavy_rain",
+      "alertId": null,
+      "language": "ko",
+      "sections": {
+        "now": [
+          { "text": "침수 위험 지역과 하천·계곡에서 벗어나 안전한 곳으로 이동하세요.", "priority": 1 },
+          { "text": "침수된 도로·지하차도·교량에는 진입하지 마세요.", "priority": 1 }
+        ],
+        "within10Minutes": [
+          { "text": "가족·이웃의 안전을 확인하고 공식 기상·재난정보를 공유하세요.", "priority": 2 },
+          { "text": "대피 안내를 받으면 비상용품을 챙겨 신속히 대피하세요.", "priority": 2 }
+        ],
+        "doNot": [
+          { "text": "급류를 건너거나 물꼬·논둑을 확인하러 나가지 마세요.", "priority": 1 },
+          { "text": "하천변·저지대 등 침수 위험지역에 머물지 마세요.", "priority": 1 }
+        ]
+      },
+      "shelterSearch": { "available": true },
+      "sources": [
+        { "sourceId": "guideline_heavy_rain", "title": "국민행동요령 - 호우", "section": "호우 예보·특보 시 행동요령" }
+      ],
+      "createdAt": null
+    },
+    "earthquake": {
+      "id": "fallback_earthquake",
+      "alertId": null,
+      "language": "ko",
+      "sections": {
+        "now": [
+          { "text": "실내에서 흔들리면 탁자 아래로 들어가 몸을 보호하세요.", "priority": 1 },
+          { "text": "흔들림이 멈추면 전기·가스를 차단하고 문을 열어 출구를 확보하세요.", "priority": 1 }
+        ],
+        "within10Minutes": [
+          { "text": "엘리베이터 대신 계단을 이용해 넓은 장소로 대피하세요.", "priority": 2 },
+          { "text": "가족의 안전과 부상 여부를 확인하고 필요하면 119에 구조를 요청하세요.", "priority": 2 }
+        ],
+        "doNot": [
+          { "text": "지진 발생 시 엘리베이터를 이용하지 마세요.", "priority": 1 },
+          { "text": "건물 가까이에 머물거나 차량으로 대피하지 마세요.", "priority": 1 }
+        ]
+      },
+      "shelterSearch": { "available": true },
+      "sources": [
+        { "sourceId": "guideline_earthquake", "title": "국민행동요령 - 지진", "section": "지진 발생 시·대피 후 행동요령" }
+      ],
+      "createdAt": null
+    },
+    "typhoon": {
+      "id": "fallback_typhoon",
+      "alertId": null,
+      "language": "ko",
+      "sections": {
+        "now": [
+          { "text": "대피가 필요하면 주변 사람과 함께 안전한 장소로 이동하세요.", "priority": 1 },
+          { "text": "침수 도로·지하차도·하천·해안 등 위험지역에 접근하지 마세요.", "priority": 1 }
+        ],
+        "within10Minutes": [
+          { "text": "가족·이웃의 안전을 확인하고 공식 기상정보를 확인하세요.", "priority": 2 },
+          { "text": "어르신·어린이·장애인 등 대피약자와 함께 대피하세요.", "priority": 2 }
+        ],
+        "doNot": [
+          { "text": "태풍 특보 중 논둑이나 물꼬를 확인하러 나가지 마세요.", "priority": 1 },
+          { "text": "창문 가까이에 머물거나 젖은 손으로 전기시설을 만지지 마세요.", "priority": 1 }
+        ]
+      },
+      "shelterSearch": { "available": true },
+      "sources": [
+        { "sourceId": "guideline_typhoon", "title": "국민행동요령 - 태풍", "section": "태풍 예보·특보 중 행동요령" }
+      ],
+      "createdAt": null
+    },
+    "fire": {
+      "id": "fallback_fire",
+      "alertId": null,
+      "language": "ko",
+      "sections": {
+        "now": [
+          { "text": "주변에 화재를 알리고, 문손잡이가 뜨겁다면 문을 열지 마세요.", "priority": 1 },
+          { "text": "엘리베이터를 이용하지 말고 계단으로 대피하세요.", "priority": 1 }
+        ],
+        "within10Minutes": [
+          { "text": "안전한 장소로 대피한 뒤 119에 신고하고 대피 인원을 확인하세요.", "priority": 2 },
+          { "text": "대피한 사람 중 보이지 않는 사람이 있으면 소방관에게 알리세요.", "priority": 2 }
+        ],
+        "doNot": [
+          { "text": "신고하느라 대피를 늦추지 마세요.", "priority": 1 },
+          { "text": "뜨겁거나 따뜻한 문손잡이가 있는 문을 열지 마세요.", "priority": 1 }
+        ]
+      },
+      "shelterSearch": { "available": true },
+      "sources": [
+        { "sourceId": "guideline_fire", "title": "국민행동요령 - 화재", "section": "화재경보·화재 발견 시 행동요령" }
+      ],
+      "createdAt": null
+    },
+    "heat_wave": {
+      "id": "fallback_heat_wave",
+      "alertId": null,
+      "language": "ko",
+      "sections": {
+        "now": [
+          { "text": "야외활동을 자제하고 시원한 장소에서 물을 마시며 쉬세요.", "priority": 1 },
+          { "text": "현기증·두통 등 온열질환 증상이 있으면 시원한 곳으로 이동하세요.", "priority": 1 }
+        ],
+        "within10Minutes": [
+          { "text": "어린이·노약자 등 더위에 취약한 사람의 안부를 확인하세요.", "priority": 2 },
+          { "text": "열사병이 의심되거나 의식장애가 있으면 119에 신고하세요.", "priority": 1 }
+        ],
+        "doNot": [
+          { "text": "가장 더운 오후 2~5시에는 실외 작업을 피하세요.", "priority": 1 },
+          { "text": "창문이 닫힌 차 안에 어린이나 노약자를 혼자 두지 마세요.", "priority": 1 }
+        ]
+      },
+      "shelterSearch": { "available": true },
+      "sources": [
+        { "sourceId": "guideline_heat_wave", "title": "국민행동요령 - 폭염", "section": "평상시·폭염 발생 시 행동요령" }
+      ],
+      "createdAt": null
+    }
+  }
+}
