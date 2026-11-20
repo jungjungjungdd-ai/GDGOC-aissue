@@ -1,9 +1,24 @@
+# 패키지 (npm install 하면 다시 생김)
+node_modules/
 
+# 빌드 결과물
+dist/
+build/
+.vercel/
+
+# 환경변수/비밀키 (절대 올리면 안 됨!)
 .env
 .env.local
-.vercel/
-node_modules/
-.vercel
-.env*
+.env.*.local
+!.env.example
+*.key
 
-dist/
+# VS Code 개인 설정
+.vscode/
+
+# OS 파일
+.DS_Store
+Thumbs.db
+
+# 로그
+npm-debug.log*
