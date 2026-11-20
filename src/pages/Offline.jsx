@@ -102,7 +102,7 @@ export default function Offline() {
                     </div>
                     <p className="muted small">{s.address}</p>
                     <div className="shelter-tags">
-                      {s.rampAvailable && <span className="badge">♿ 경사로</span>}
+                      {s.rampAvailable && <span className="badge ramp">♿ 높이차이 제거</span>}
                     </div>
                     {online ? (
                       <a className="btn-primary" href={s.mapUrl} target="_blank" rel="noreferrer">길찾기</a>

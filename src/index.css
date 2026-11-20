@@ -182,3 +182,7 @@ a.btn-primary { display: block; text-align: center; text-decoration: none; }
 .offline-types { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 16px; }
 .place.selected { border-color: #d32f2f; background: #fdecea; }
 .offline-sub { font-size: 19px; margin: 20px 0 8px; }
+
+/* 접근성(장애인편의시설) 표시 */
+.badge.ramp { background: #e3f2fd; color: #0d47a1; font-weight: 700; }
+.access-info { margin: 0 0 6px; }
