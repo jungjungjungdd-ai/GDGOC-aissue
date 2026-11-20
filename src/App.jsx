@@ -8,16 +8,14 @@ import Location from './pages/Location.jsx';
 import Card from './pages/Card.jsx';
 import Shelters from './pages/Shelters.jsx';
 import My from './pages/My.jsx';
-import { getProfile } from './lib/storage.js';
+import RequireProfile from './components/RequireProfile.jsx';
 
 export default function App() {
-  const hasProfile = !!getProfile();
-
   return (
     <Routes>
       {/* 하단 탭이 있는 화면 */}
       <Route element={<Layout />}>
-        <Route path="/" element={hasProfile ? <Home /> : <Navigate to="/onboarding" replace />} />
+        <Route path="/" element={<RequireProfile><Home /></RequireProfile>} />
         <Route path="/alerts" element={<Alerts />} />
         <Route path="/shelters" element={<Shelters />} />
         <Route path="/my" element={<My />} />

@@ -20,3 +20,9 @@ export const getPushSubscription = () => read(KEY.push);
 export const savePushSubscription = (s) => write(KEY.push, s);
 export const getOfflineBundle = () => read(KEY.offline);
 export const saveOfflineBundle = (b) => write(KEY.offline, b);
+
+// 온보딩에서 고른 언어 (프로필 저장 전까지 임시 보관)
+const DRAFT_LANGUAGE = 'aissue.draftLanguage';
+export const getDraftLanguage = () => localStorage.getItem(DRAFT_LANGUAGE);
+export const saveDraftLanguage = (lang) => localStorage.setItem(DRAFT_LANGUAGE, lang);
+export const clearDraftLanguage = () => localStorage.removeItem(DRAFT_LANGUAGE);
