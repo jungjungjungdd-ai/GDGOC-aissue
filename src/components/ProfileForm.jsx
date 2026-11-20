@@ -20,11 +20,6 @@ const DEPENDENTS = [
   { value: 'infant', label: '영유아' },
   { value: 'elderly', label: '노인' },
 ];
-const PETS = [
-  { value: 'dog', label: '개' },
-  { value: 'cat', label: '고양이' },
-  { value: 'other', label: '기타' },
-];
 const HOUSING = [
   { value: 'semi_basement', label: '반지하' },
   { value: 'low_floor', label: '저층 (1~3층)' },
@@ -37,7 +32,6 @@ export const EMPTY_PROFILE = {
   sensory: [],
   livesAlone: false,
   dependents: [],
-  pets: [],
   housingType: '',
   guardian: { name: '', phone: '' },
 };
@@ -141,11 +135,6 @@ export default function ProfileForm({ initial, submitLabel = '저장하기', onS
       <fieldset>
         <legend>함께 챙겨야 할 가족이 있나요?</legend>
         <MultiChoice options={DEPENDENTS} values={p.dependents} onChange={set('dependents')} />
-      </fieldset>
-
-      <fieldset>
-        <legend>반려동물이 있나요?</legend>
-        <MultiChoice options={PETS} values={p.pets} onChange={set('pets')} />
       </fieldset>
 
       <fieldset>
