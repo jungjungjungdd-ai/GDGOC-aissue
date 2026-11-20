@@ -76,3 +76,21 @@ p { margin-bottom: 8px; }
 .input:focus { outline: none; border-color: #d32f2f; }
 .error { color: #c62828; font-weight: 600; margin-bottom: 8px; }
 .toast { background: #e8f5e9; color: #1b5e20; padding: 12px; border-radius: 10px; font-weight: 600; margin-bottom: 12px; }
+
+/* 위치·장소 확인 */
+.back { display: inline-block; margin-bottom: 16px; color: #666; text-decoration: none; font-size: 17px; }
+.alert-box { background: #fdecea; border-left: 6px solid #d32f2f; border-radius: 10px; padding: 16px; margin-bottom: 24px; }
+.alert-box h2 { color: #b71c1c; margin: 6px 0; }
+.alert-box p { color: #5f2120; }
+.alert-meta { font-size: 15px; margin: 0; }
+.notice { background: #fff8e1; color: #6d4c00; padding: 12px; border-radius: 10px; margin-bottom: 8px; }
+.place-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0 24px; }
+.place {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding: 20px 8px; border: 2px solid #ddd; border-radius: 14px; background: #fff;
+  font-size: 19px; font-weight: 700; cursor: pointer;
+}
+.place:active { border-color: #d32f2f; background: #fdecea; }
+.place:disabled { opacity: 0.5; cursor: not-allowed; }
+.place-icon { font-size: 34px; }
+.small { font-size: 14px; }
