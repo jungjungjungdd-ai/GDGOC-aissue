@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { appendFileSync, mkdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { GoogleGenAI } from "@google/genai";
@@ -554,6 +554,20 @@ function parseAndValidateResponse(text, allowedEvidenceIds) {
   return parsed;
 }
 
+// 붐빌 때(503)·사용량 초과(429)는 잠깐 쉬고 재시도 → 그래도 안 되면 다음 모델로
+const TRANSIENT = /\b(503|429|500)\b|UNAVAILABLE|RESOURCE_EXHAUSTED|overloaded|high demand/i;
+
+function modelCandidates() {
+  const primary = process.env.GEMINI_MODEL || "gemini-3.8-flash";
+  const backups = (process.env.GEMINI_FALLBACK_MODELS || "gemini-3.7-flash,gemini-3.5-flash")
+    .split(",")
+    .map((m) => m.trim())
+    .filter(Boolean);
+  return [...new Set([primary, ...backups])];
+}
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
 async function callGemini(promptData, retryMessage) {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) throw new Error("GEMINI_API_KEY가 설정되지 않았습니다.");
@@ -566,18 +580,51 @@ async function callGemini(promptData, retryMessage) {
     ...(retryMessage ? { correction: retryMessage } : {}),
   };
 
-  return ai.models.generateContent({
-    model: process.env.GEMINI_MODEL || "gemini-3.8-flash",
-    contents: JSON.stringify(contents),
-    config: {
-      systemInstruction: SYSTEM_INSTRUCTION,
-      responseMimeType: "application/json",
-      responseJsonSchema: CARD_SCHEMA,
-    },
-  });
+  let lastError;
+  for (const model of modelCandidates()) {
+    for (let attempt = 0; attempt < 2; attempt += 1) {
+      try {
+        return await ai.models.generateContent({
+          model,
+          contents: JSON.stringify(contents),
+          config: {
+            systemInstruction: SYSTEM_INSTRUCTION,
+            responseMimeType: "application/json",
+            responseJsonSchema: CARD_SCHEMA,
+          },
+        });
+      } catch (error) {
+        lastError = error;
+        const message = String(error?.message || "");
+        console.warn("[card] " + model + " 실패(" + (attempt + 1) + "회):", message.slice(0, 120));
+        // 모델 이름이 없을 때(404)는 바로 다음 모델로, 그 외 영구 오류는 중단
+        if (/\b404\b|NOT_FOUND/i.test(message)) break;
+        if (!TRANSIENT.test(message)) throw error;
+        if (attempt === 0) await sleep(800);
+      }
+    }
+  }
+  throw lastError;
+}
+
+// 마지막 실패 이유 (로컬 개발에서만 응답에 실어서 원인 확인용)
+let lastFailure = null;
+const IS_DEV = process.env.VERCEL_ENV === "development" || !process.env.VERCEL_ENV;
+
+// 로컬 개발에서만: .vercel/card-debug.log 에 결과 기록 (.vercel은 gitignore 대상)
+function writeDevLog(line) {
+  if (!IS_DEV) return;
+  try {
+    const dir = path.join(process.cwd(), ".vercel");
+    mkdirSync(dir, { recursive: true });
+    appendFileSync(path.join(dir, "card-debug.log"), new Date().toISOString() + " " + line + "\n");
+  } catch {
+    // 로그 실패는 무시
+  }
 }
 
 async function generateValidatedCard(promptData, chunks) {
+  lastFailure = null;
   const evidenceIds = new Set(chunks.map((chunk) => chunk.id));
   let firstResponse;
 
@@ -585,6 +632,7 @@ async function generateValidatedCard(promptData, chunks) {
     firstResponse = await callGemini(promptData);
   } catch (error) {
     console.error("[card] Gemini 호출 실패:", error?.message);
+    lastFailure = "Gemini 호출 실패: " + error?.message;
     return null;
   }
 
@@ -603,6 +651,7 @@ async function generateValidatedCard(promptData, chunks) {
     );
   } catch (error) {
     console.error("[card] Gemini 재요청 실패:", error?.message);
+    lastFailure = "Gemini 재요청 실패: " + error?.message;
     return null;
   }
 
@@ -610,6 +659,7 @@ async function generateValidatedCard(promptData, chunks) {
     return parseAndValidateResponse(retryResponse.text, evidenceIds);
   } catch (error) {
     console.warn("[card] 재요청도 검증 실패, 기본 카드 반환:", error?.message);
+    lastFailure = "응답 검증 실패: " + error?.message;
     return null;
   }
 }
@@ -683,9 +733,13 @@ export async function createActionCard({ alertId, profile = {}, location = {} })
 
   const generated = await generateValidatedCard(promptData, chunks);
   if (!generated) {
-    return makeFallback(disasterType, alertId, fallbackData, guideline);
+    const card = makeFallback(disasterType, alertId, fallbackData, guideline);
+    if (IS_DEV && lastFailure) card.debugReason = lastFailure;
+    writeDevLog(alertId + " 기본 카드: " + (lastFailure || "이유 없음"));
+    return card;
   }
 
+  writeDevLog(alertId + " 맞춤 카드 생성 성공");
   const sections = {};
   for (const sectionName of ["now", "within10Minutes", "doNot"]) {
     sections[sectionName] = generated.sections[sectionName].map((action) => ({
