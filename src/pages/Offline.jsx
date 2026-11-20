@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { getOfflineBundle, getProfile } from '../lib/storage.js';
 import { DISASTERS, buildOfflineBundle } from '../lib/offline.js';
 import { SECTIONS, sortedItems } from '../lib/cardSections.js';
-import { formatDistance } from '../lib/shelters.js';
+import { formatDistance, DATA_SOURCE } from '../lib/shelters.js';
 import { useOnline } from '../lib/useOnline.js';
 
 function formatTime(iso) {
@@ -103,7 +103,6 @@ export default function Offline() {
                     <p className="muted small">{s.address}</p>
                     <div className="shelter-tags">
                       {s.rampAvailable && <span className="badge">♿ 경사로</span>}
-                      {s.petAllowed && <span className="badge">🐾 반려동물</span>}
                     </div>
                     {online ? (
                       <a className="btn-primary" href={s.mapUrl} target="_blank" rel="noreferrer">길찾기</a>
@@ -114,7 +113,8 @@ export default function Offline() {
                 ))}
               </ul>
               <p className="muted small">
-                {bundle.shelterBase === 'gps' ? '거리는 저장할 때 위치 기준이에요.' : '거리는 마포구청 기준이에요. (샘플 데이터)'}
+                {bundle.shelterBase === 'gps' ? '거리는 저장할 때 위치 기준이에요.' : '거리는 시흥시 중심 기준이에요.'}
+                <br />출처: {DATA_SOURCE}
               </p>
             </>
           )}

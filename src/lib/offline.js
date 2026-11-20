@@ -49,7 +49,6 @@ export function buildOfflineBundle(profile) {
     );
     const shelters = await loadShelters({
       wheelchair: profile.mobility === 'wheelchair',
-      pet: (profile.pets?.length ?? 0) > 0,
       limit: 5,
     });
     const bundle = {

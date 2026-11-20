@@ -1,12 +1,1402 @@
 [
-  { "id": "shl_mapo_001", "name": "망원 주민센터 대피소",   "address": "서울 마포구 망원동 샘플주소 1",  "latitude": 37.5562, "longitude": 126.9058, "rampAvailable": true,  "petAllowed": true  },
-  { "id": "shl_mapo_002", "name": "합정 체육관 대피소",     "address": "서울 마포구 합정동 샘플주소 2",  "latitude": 37.5498, "longitude": 126.9139, "rampAvailable": true,  "petAllowed": true  },
-  { "id": "shl_mapo_003", "name": "상암 문화센터 대피소",   "address": "서울 마포구 상암동 샘플주소 3",  "latitude": 37.5779, "longitude": 126.8916, "rampAvailable": true,  "petAllowed": true  },
-  { "id": "shl_mapo_004", "name": "서교 초등학교 대피소",   "address": "서울 마포구 서교동 샘플주소 4",  "latitude": 37.5531, "longitude": 126.9187, "rampAvailable": true,  "petAllowed": false },
-  { "id": "shl_mapo_005", "name": "공덕 복지관 대피소",     "address": "서울 마포구 공덕동 샘플주소 5",  "latitude": 37.5446, "longitude": 126.9515, "rampAvailable": true,  "petAllowed": false },
-  { "id": "shl_mapo_006", "name": "성산 공원 대피소",       "address": "서울 마포구 성산동 샘플주소 6",  "latitude": 37.5655, "longitude": 126.9089, "rampAvailable": false, "petAllowed": true  },
-  { "id": "shl_mapo_007", "name": "연남 커뮤니티홀 대피소", "address": "서울 마포구 연남동 샘플주소 7",  "latitude": 37.5627, "longitude": 126.9234, "rampAvailable": false, "petAllowed": true  },
-  { "id": "shl_mapo_008", "name": "도화 중학교 대피소",     "address": "서울 마포구 도화동 샘플주소 8",  "latitude": 37.5397, "longitude": 126.9488, "rampAvailable": false, "petAllowed": false },
-  { "id": "shl_mapo_009", "name": "신수 교회 대피소",       "address": "서울 마포구 신수동 샘플주소 9",  "latitude": 37.5468, "longitude": 126.9349, "rampAvailable": false, "petAllowed": false },
-  { "id": "shl_mapo_010", "name": "대흥 지하주차장 대피소", "address": "서울 마포구 대흥동 샘플주소 10", "latitude": 37.5508, "longitude": 126.9421, "rampAvailable": false, "petAllowed": false }
+ {
+  "id": "shl_siheung_4010000-S201000018",
+  "name": "정왕1동 주공6차아파트 지하주차장 1층",
+  "address": "경기도 시흥시 중심상가로 248 (정왕동)",
+  "latitude": 37.341136,
+  "longitude": 126.741137,
+  "facilityType": "공공용시설",
+  "areaM2": 8998.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199900004",
+  "name": "장곡동 삼환,한진아파트 지하주차장 1층",
+  "address": "경기도 시흥시 진말로 46 (장곡동, 진말 삼환.한진아파트)",
+  "latitude": 37.381424,
+  "longitude": 126.787282,
+  "facilityType": "공공용시설",
+  "areaM2": 3933.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201100019",
+  "name": "은행동 삼성홈타운아파트 지하주차장 1층",
+  "address": "경기도 시흥시 검바위1로 19 (은행동, 삼성홈타운)",
+  "latitude": 37.431175,
+  "longitude": 126.794406,
+  "facilityType": "공공용시설",
+  "areaM2": 1256.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201300001",
+  "name": "신천동 푸르지오5차아파트 지하주차장",
+  "address": "경기도 시흥시 복지로 15 (신천동)",
+  "latitude": 37.441609,
+  "longitude": 126.787353,
+  "facilityType": "공공용시설",
+  "areaM2": 24435.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199900002",
+  "name": "장곡동 삼성아파트 지하주차장 1층",
+  "address": "경기도 시흥시 인선길 77 (장곡동, 매꼴마을삼성아파트)",
+  "latitude": 37.377987,
+  "longitude": 126.780017,
+  "facilityType": "공공용시설",
+  "areaM2": 3011.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199700010",
+  "name": "정왕3동 신호아파트 지하주차장 1층",
+  "address": "경기도 시흥시 옥구천서로373번길 7 (정왕동)",
+  "latitude": 37.355468,
+  "longitude": 126.726521,
+  "facilityType": "공공용시설",
+  "areaM2": 6017.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200400042",
+  "name": "신천동 우남한신아파트 지하주차장",
+  "address": "경기도 시흥시 시흥대로1073번길 39 (신천동, 우남한신아파트)",
+  "latitude": 37.432376,
+  "longitude": 126.788461,
+  "facilityType": "공공용시설",
+  "areaM2": 4045.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201100010",
+  "name": "은행동 예스라이프아파트 지하 1층 주차장",
+  "address": "경기도 시흥시 은행로65번길 4-1 (은행동, 타원에스라이프APT)",
+  "latitude": 37.438144,
+  "longitude": 126.795662,
+  "facilityType": "공공용시설",
+  "areaM2": 4302.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000006",
+  "name": "연성동 장현엔플러스빌 아파트 지하주차장 1층",
+  "address": "경기도 시흥시 새재로 3 (장현동)",
+  "latitude": 37.380031,
+  "longitude": 126.80112,
+  "facilityType": "공공용시설",
+  "areaM2": 6445.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201100038",
+  "name": "월곶동 월곶4차풍림아이원아파트 지하주차장 지하 1~2층",
+  "address": "경기도 시흥시 월곶중앙로14번길 9 (월곶동, 월곶4차풍림아이원아파트)",
+  "latitude": 37.3878,
+  "longitude": 126.743919,
+  "facilityType": "공공용시설",
+  "areaM2": 24854.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000004",
+  "name": "연성동 엔플러스빌아파트 지하주차장 1층",
+  "address": "경기도 시흥시 연성로13번길 11 (하중동, N PLUS빌 아파트)",
+  "latitude": 37.391238,
+  "longitude": 126.804507,
+  "facilityType": "공공용시설",
+  "areaM2": 4218.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199400004",
+  "name": "정왕1동 건영1차 아파트 지하주차장 1층",
+  "address": "경기도 시흥시 중심상가로 285 (정왕동)",
+  "latitude": 37.339238,
+  "longitude": 126.74476,
+  "facilityType": "공공용시설",
+  "areaM2": 8273.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200300002",
+  "name": "대야동 극동아파트 지하주차장 지하1층",
+  "address": "경기도 시흥시 소래산길 18 (대야동, 극동아파트)",
+  "latitude": 37.449096,
+  "longitude": 126.786457,
+  "facilityType": "공공용시설",
+  "areaM2": 6138.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199800011",
+  "name": "정왕4동 보성아파트 지하주차장 지하 1층",
+  "address": "경기도 시흥시 함송로 63 (정왕동)",
+  "latitude": 37.361357,
+  "longitude": 126.734378,
+  "facilityType": "공공용시설",
+  "areaM2": 3169.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200000001",
+  "name": "신현동 태산아파트 전체 동의 지하주차장 1층",
+  "address": "경기도 시흥시 신현로38번길 23 (포동, 태산아파트)",
+  "latitude": 37.407403,
+  "longitude": 126.783845,
+  "facilityType": "공공용시설",
+  "areaM2": 8992.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200700005",
+  "name": "대야동 시흥시청소년수련관 지하주차장 지하1층",
+  "address": "경기도 시흥시 은행로 179, 시흥시청소년수련관 (대야동)",
+  "latitude": 37.446436,
+  "longitude": 126.797374,
+  "facilityType": "공공용시설",
+  "areaM2": 1694.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199600008",
+  "name": "정왕1동 두산아파트 지하주차장 1층",
+  "address": "경기도 시흥시 중심상가로 286 (정왕동)",
+  "latitude": 37.338989,
+  "longitude": 126.744706,
+  "facilityType": "공공용시설",
+  "areaM2": 6694.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199800001",
+  "name": "은행동 대우3차아파트 지하주차장 1층",
+  "address": "경기도 시흥시 대은로 62 (은행동, 대우아파트)",
+  "latitude": 37.443553,
+  "longitude": 126.795775,
+  "facilityType": "공공용시설",
+  "areaM2": 13170.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000031",
+  "name": "능곡동 현진에버빌아파트 지하주차장 1층",
+  "address": "경기도 시흥시 승지로 88 (능곡동, 현진에버빌아파트)",
+  "latitude": 37.371789,
+  "longitude": 126.810925,
+  "facilityType": "공공용시설",
+  "areaM2": 10107.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S202200003",
+  "name": "배곧2동 한라비발디캠퍼스 1차 지하주차장 1~2층",
+  "address": "경기도 시흥시 배곧1로 27-15(배곧동, 한라비발디캠퍼스)",
+  "latitude": 37.36273,
+  "longitude": 126.713183,
+  "facilityType": "공공용시설",
+  "areaM2": 110687.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199700004",
+  "name": "정왕2동 화성아파트 지하주차장 1층",
+  "address": "경기도 시흥시 역전로 375-8 (정왕동)",
+  "latitude": 37.358342,
+  "longitude": 126.734582,
+  "facilityType": "공공용시설",
+  "areaM2": 5643.74,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200800001",
+  "name": "대야동 시흥시체육관 지하주차장 지하1층",
+  "address": "경기도 시흥시 서해안로 1589, 시흥시체육관 (대야동)",
+  "latitude": 37.447548,
+  "longitude": 126.785008,
+  "facilityType": "공공용시설",
+  "areaM2": 1960.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199300002",
+  "name": "군자동 아주4차 401동 지하주차장 1층",
+  "address": "경기도 시흥시 도일로135번길 42 (거모동, 아주아파트)",
+  "latitude": 37.345585,
+  "longitude": 126.782721,
+  "facilityType": "공공용시설",
+  "areaM2": 858.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S202300001",
+  "name": "거북섬동 웨이브파크 지하주차장 지하 1층",
+  "address": "경기도 시흥시 거북섬둘레길 42, 웨이브파크 (정왕동)",
+  "latitude": 37.324101,
+  "longitude": 126.680688,
+  "facilityType": "공공용시설",
+  "areaM2": 4682.05,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199900001",
+  "name": "연성동 금호타운아파트 지하주차장 1층",
+  "address": "경기도 시흥시 하상로 36 (하상동, 금호타운아파트)",
+  "latitude": 37.394039,
+  "longitude": 126.812818,
+  "facilityType": "공공용시설",
+  "areaM2": 11511.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201600005",
+  "name": "배곧1동 에스케이뷰아파트 지하주차장 지하1층",
+  "address": "경기도 시흥시 배곧3로 27-7(배곧동, 시흥배곧 에스케이뷰)",
+  "latitude": 37.374415,
+  "longitude": 126.724899,
+  "facilityType": "공공용시설",
+  "areaM2": 50396.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000026",
+  "name": "과림동 한국글로벌중(한국조리과학고) 지하 1층 강당",
+  "address": "경기도 시흥시 금오로 640 (과림동)",
+  "latitude": 37.458102,
+  "longitude": 126.832939,
+  "facilityType": "공공용시설",
+  "areaM2": 196.65,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201100006",
+  "name": "연성동 샛말대우아파트 각 동 지하실 1층",
+  "address": "경기도 시흥시 연성로13번길 36 (하중동, 샛말대우아파트)",
+  "latitude": 37.393296,
+  "longitude": 126.803738,
+  "facilityType": "공공용시설",
+  "areaM2": 1598.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199700019",
+  "name": "매화동 에이스아파트 지하주차장",
+  "address": "경기도 시흥시 매화로 145 (도창동, 에이스아파트)",
+  "latitude": 37.409008,
+  "longitude": 126.818329,
+  "facilityType": "공공용시설",
+  "areaM2": 18286.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199700018",
+  "name": "정왕4동 건영2차아파트 지하주차장 지하 1층",
+  "address": "경기도 시흥시 옥구천동로 399 (정왕동)",
+  "latitude": 37.356906,
+  "longitude": 126.729742,
+  "facilityType": "공공용시설",
+  "areaM2": 5421.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200400040",
+  "name": "연성동 태평아파트 지하주차장 1층",
+  "address": "경기도 시흥시 상직길 9 (하상동, 태평아파트)",
+  "latitude": 37.389963,
+  "longitude": 126.812428,
+  "facilityType": "공공용시설",
+  "areaM2": 4877.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201100011",
+  "name": "은행동 두산아파트 지하1층 주차장",
+  "address": "경기도 시흥시 대은로104번길 25 (은행동, 두산아파트)",
+  "latitude": 37.443441,
+  "longitude": 126.80072,
+  "facilityType": "공공용시설",
+  "areaM2": 8754.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000027",
+  "name": "신현동 해가든더클래식아파트 전체 동 지하주차장 1~2층",
+  "address": "경기도 시흥시 미산로100번길 11 (미산동)",
+  "latitude": 37.420163,
+  "longitude": 126.795252,
+  "facilityType": "공공용시설",
+  "areaM2": 17074.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000039",
+  "name": "능곡동 휴먼시아13단지아파트 지하주차장 1층",
+  "address": "경기도 시흥시 시흥대로268번길 53 (능곡동, 휴먼시아)",
+  "latitude": 37.363669,
+  "longitude": 126.812861,
+  "facilityType": "공공용시설",
+  "areaM2": 6527.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000034",
+  "name": "능곡동 휴먼시아2단지아파트 지하주차장 1층",
+  "address": "경기도 시흥시 승지로 89 (능곡동, 시흥능곡 Humansia아파트)",
+  "latitude": 37.372026,
+  "longitude": 126.810365,
+  "facilityType": "공공용시설",
+  "areaM2": 3777.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199700013",
+  "name": "정왕4동 세종2차아파트 지하주차장 지하 1층",
+  "address": "경기도 시흥시 함송로29번길 38 (정왕동)",
+  "latitude": 37.364853,
+  "longitude": 126.734445,
+  "facilityType": "공공용시설",
+  "areaM2": 3564.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199600009",
+  "name": "정왕4동 세종1차아파트 지하주차장 지하 1층",
+  "address": "경기도 시흥시 함송로29번길 54 (정왕동)",
+  "latitude": 37.364333,
+  "longitude": 126.735922,
+  "facilityType": "공공용시설",
+  "areaM2": 4800.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199700012",
+  "name": "목감동 삼호가든아파트 지하주차장 지하 1층",
+  "address": "경기도 시흥시 목감초등길 4 (조남동, 삼호아파트)",
+  "latitude": 37.383316,
+  "longitude": 126.859171,
+  "facilityType": "공공용시설",
+  "areaM2": 6528.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000037",
+  "name": "능곡동 신안인스빌 지하주차장 1~2층",
+  "address": "경기도 시흥시 승지로 7 (능곡동, 시흥능곡신안인스빌아파트)",
+  "latitude": 37.365047,
+  "longitude": 126.810338,
+  "facilityType": "공공용시설",
+  "areaM2": 22260.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199800012",
+  "name": "정왕4동 서해2차아파트 지하주차장 지하 1층",
+  "address": "경기도 시흥시 정왕신길로49번길 19 (정왕동)",
+  "latitude": 37.359773,
+  "longitude": 126.727414,
+  "facilityType": "공공용시설",
+  "areaM2": 3980.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199900005",
+  "name": "정왕4동 대림4단지아파트 지하주차장 지하 1층",
+  "address": "경기도 시흥시 함송로29번길 51 (정왕동)",
+  "latitude": 37.364823,
+  "longitude": 126.735843,
+  "facilityType": "공공용시설",
+  "areaM2": 1064.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S190000009",
+  "name": "대야동 한신아파트 지하주차장 지하1층",
+  "address": "경기도 시흥시 서해안로1670번길 12 (대야동)",
+  "latitude": 37.450546,
+  "longitude": 126.793982,
+  "facilityType": "공공용시설",
+  "areaM2": 1280.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S190000036",
+  "name": "신천동 상아아파트 지하주차장",
+  "address": "경기도 시흥시 신천8길 19 (신천동, 상아아파트)",
+  "latitude": 37.436372,
+  "longitude": 126.77877,
+  "facilityType": "공공용시설",
+  "areaM2": 2688.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201600001",
+  "name": "목감동 목감퍼스트리움 아파트 지하주차장 지하 1층",
+  "address": "경기도 시흥시 목감둘레로 229-10 (조남동, 목감 퍼스트리움 아파트)",
+  "latitude": 37.37923,
+  "longitude": 126.859478,
+  "facilityType": "공공용시설",
+  "areaM2": 15555.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200400005",
+  "name": "은행동 풍림아파트 지하주차장 지하1층",
+  "address": "경기도 시흥시 검바위2로 52-12 (은행동, 풍림아파트)",
+  "latitude": 37.433477,
+  "longitude": 126.798083,
+  "facilityType": "공공용시설",
+  "areaM2": 3116.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S202000001",
+  "name": "능곡동 엘에이치4단지아파트 지하주차장 1층",
+  "address": "경기도 시흥시 능곡서로 27 (능곡동, 엘에이치4단지)",
+  "latitude": 37.369868,
+  "longitude": 126.802405,
+  "facilityType": "공공용시설",
+  "areaM2": 8396.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S190000001",
+  "name": "대야동 청구1차아파트 지하주차장 지하1층",
+  "address": "경기도 시흥시 은행로 243-17 (대야동, 청구아파트)",
+  "latitude": 37.446684,
+  "longitude": 126.796285,
+  "facilityType": "공공용시설",
+  "areaM2": 3247.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201800002",
+  "name": "목감동 레이크푸르지오아파트 지하주차장 지하 1~2층",
+  "address": "경기도 시흥시 목감남서로 92-30 (산현동, 목감레이크 푸르지오)",
+  "latitude": 37.37528,
+  "longitude": 126.84217,
+  "facilityType": "공공용시설",
+  "areaM2": 18471.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S190000003",
+  "name": "대야동 서해아파트 지하주차장 지하1층",
+  "address": "경기도 시흥시 비둘기공원7길 19 (대야동, 서해아파트)",
+  "latitude": 37.444123,
+  "longitude": 126.793259,
+  "facilityType": "공공용시설",
+  "areaM2": 4501.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199300004",
+  "name": "매화동 동진아파트 지하주차장",
+  "address": "경기도 시흥시 매화로 41 (매화동, 동진아파트)",
+  "latitude": 37.41571,
+  "longitude": 126.815011,
+  "facilityType": "공공용시설",
+  "areaM2": 661.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200400038",
+  "name": "연성동 연꽃마을대우삼호아파트 지하주차장 1층",
+  "address": "경기도 시흥시 관곡지로 222 (하상동)",
+  "latitude": 37.394935,
+  "longitude": 126.812654,
+  "facilityType": "공공용시설",
+  "areaM2": 5172.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201300003",
+  "name": "신천동 삼환나우빌아파트 지하주차장",
+  "address": "경기도 시흥시 시흥대로 1144 (신천동, 시흥신천삼환나우빌)",
+  "latitude": 37.437675,
+  "longitude": 126.79171,
+  "facilityType": "공공용시설",
+  "areaM2": 16815.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S190000002",
+  "name": "대야동 청구2차아파트 지하주차장 지하1층",
+  "address": "경기도 시흥시 비둘기공원7길 37 (대야동, 청구아파트)",
+  "latitude": 37.442589,
+  "longitude": 126.792804,
+  "facilityType": "공공용시설",
+  "areaM2": 6811.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200400039",
+  "name": "연성동 동아아파트 지하주차장 1층",
+  "address": "경기도 시흥시 하중로133번길 19 (하중동, 동아아파트)",
+  "latitude": 37.399751,
+  "longitude": 126.801814,
+  "facilityType": "공공용시설",
+  "areaM2": 7935.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199400006",
+  "name": "목감동 수정아파트 지하주차장 지하 1층",
+  "address": "경기도 시흥시 목감초등길 28 (조남동, 수정아파트)",
+  "latitude": 37.38446,
+  "longitude": 126.857629,
+  "facilityType": "공공용시설",
+  "areaM2": 930.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199600002",
+  "name": "정왕2동 신우아파트 지하주차장 1층",
+  "address": "경기도 시흥시 정왕대로117번길 26 (정왕동)",
+  "latitude": 37.353636,
+  "longitude": 126.730807,
+  "facilityType": "공공용시설",
+  "areaM2": 2688.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199600006",
+  "name": "정왕3동 한일아파트 지하주차장 1층",
+  "address": "경기도 시흥시 정왕대로53번길 29(정왕동, 한일아파트)",
+  "latitude": 37.357454,
+  "longitude": 126.725262,
+  "facilityType": "공공용시설",
+  "areaM2": 7850.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000035",
+  "name": "능곡동 휴먼시아5단지 지하주차장 1층",
+  "address": "경기도 시흥시 능곡중앙로 77 (능곡동, 휴먼시아)",
+  "latitude": 37.370651,
+  "longitude": 126.813271,
+  "facilityType": "공공용시설",
+  "areaM2": 8294.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000038",
+  "name": "능곡동 상록힐스테이트아파트 지하주차장 1층",
+  "address": "경기도 시흥시 능곡중앙로 33 (능곡동, 상록힐스테이트 아파트)",
+  "latitude": 37.366812,
+  "longitude": 126.811803,
+  "facilityType": "공공용시설",
+  "areaM2": 12205.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201500002",
+  "name": "정왕본동 푸르지오6차 1단지아파트 지하주차장 1~2층",
+  "address": "경기도 시흥시 죽율로 45-10 (죽율동)",
+  "latitude": 37.349301,
+  "longitude": 126.760627,
+  "facilityType": "공공용시설",
+  "areaM2": 40688.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S190000007",
+  "name": "대야동 서강2차아파트 지하주차장 지하1층",
+  "address": "경기도 시흥시 은행로 230 (대야동)",
+  "latitude": 37.445657,
+  "longitude": 126.794226,
+  "facilityType": "공공용시설",
+  "areaM2": 6547.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200500004",
+  "name": "신천동 경남아너스빌아파트 지하주차장",
+  "address": "경기도 시흥시 시흥대로 1119-3 (신천동, 경남아너스빌아파트)",
+  "latitude": 37.435153,
+  "longitude": 126.791332,
+  "facilityType": "공공용시설",
+  "areaM2": 12124.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000041",
+  "name": "능곡동 신일해피트리아파트 지하주차장 1~2층",
+  "address": "경기도 시흥시 능곡로 120 (능곡동, 시흥능곡 신일해피트리아파트)",
+  "latitude": 37.36493,
+  "longitude": 126.816204,
+  "facilityType": "공공용시설",
+  "areaM2": 18628.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200000004",
+  "name": "신현동 서강아파트 전체 동의 지하주차장 1~2층",
+  "address": "경기도 시흥시 신현로12번길 30 (포동)",
+  "latitude": 37.408592,
+  "longitude": 126.784972,
+  "facilityType": "공공용시설",
+  "areaM2": 2570.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199800008",
+  "name": "정왕3동 동남아파트 지하주차장 1층",
+  "address": "경기도 시흥시 정왕대로28번길 29 (정왕동)",
+  "latitude": 37.354113,
+  "longitude": 126.718729,
+  "facilityType": "공공용시설",
+  "areaM2": 5736.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200600001",
+  "name": "목감동 산호아파트 지하주차장 지하 1층",
+  "address": "경기도 시흥시 동서로 1107 (논곡동, 산호아파트)",
+  "latitude": 37.388188,
+  "longitude": 126.860701,
+  "facilityType": "공공용시설",
+  "areaM2": 661.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199400007",
+  "name": "매화동 금강1차아파트 지하주차장",
+  "address": "경기도 시흥시 매화우회로 63 (매화동, 금강아파트)",
+  "latitude": 37.4174,
+  "longitude": 126.809696,
+  "facilityType": "공공용시설",
+  "areaM2": 3792.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199700016",
+  "name": "정왕4동 부성아파트 지하주차장 지하 1층",
+  "address": "경기도 시흥시 옥구천동로 449 (정왕동)",
+  "latitude": 37.360573,
+  "longitude": 126.733232,
+  "facilityType": "공공용시설",
+  "areaM2": 4221.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200000002",
+  "name": "신현동 태헌3차아파트 전체 동의 지하주차장 1층",
+  "address": "경기도 시흥시 신현로12번길 8-1 (포동)",
+  "latitude": 37.408378,
+  "longitude": 126.786802,
+  "facilityType": "공공용시설",
+  "areaM2": 1101.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200400037",
+  "name": "연성동 대동청구아파트 지하주차장 1층",
+  "address": "경기도 시흥시 시청로 71 (장현동, 청구아파트)",
+  "latitude": 37.380494,
+  "longitude": 126.799569,
+  "facilityType": "공공용시설",
+  "areaM2": 4387.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200000018",
+  "name": "매화동 홍익아파트 지하주차장",
+  "address": "경기도 시흥시 매화우회로 37 (매화동, 홍익아파트)",
+  "latitude": 37.418321,
+  "longitude": 126.811474,
+  "facilityType": "공공용시설",
+  "areaM2": 3363.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000036",
+  "name": "능곡동 우남퍼스트빌 지하주차장 1~2층",
+  "address": "경기도 시흥시 시흥대로268번길 75 (능곡동)",
+  "latitude": 37.363204,
+  "longitude": 126.815198,
+  "facilityType": "공공용시설",
+  "areaM2": 14691.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199700008",
+  "name": "정왕2동 요진아파트 지하주차장 1층",
+  "address": "경기도 시흥시 중심상가로 73 (정왕동)",
+  "latitude": 37.350908,
+  "longitude": 126.725983,
+  "facilityType": "공공용시설",
+  "areaM2": 4434.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201100009",
+  "name": "목감동 논곡산호2차아파트 지하주차장 지하 1층~2층",
+  "address": "경기도 시흥시 수인로2431번길 13 (논곡동, 산호아파트)",
+  "latitude": 37.394937,
+  "longitude": 126.85558,
+  "facilityType": "공공용시설",
+  "areaM2": 1873.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000033",
+  "name": "능곡동 자연앤아파트 지하주차장 1~2층",
+  "address": "경기도 시흥시 승지로 78 (능곡동, 시흥능곡 자연아파트)",
+  "latitude": 37.370912,
+  "longitude": 126.811026,
+  "facilityType": "공공용시설",
+  "areaM2": 8885.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S202000005",
+  "name": "목감동 목감리벤티움아파트 지하주차장 지하 1~2층",
+  "address": "경기도 시흥시 목감중앙로 45 (조남동, 리벤티움)",
+  "latitude": 37.373799,
+  "longitude": 126.854593,
+  "facilityType": "공공용시설",
+  "areaM2": 26704.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S198200001",
+  "name": "과림동 경기자동차과학고등학교 지하 1층 창고",
+  "address": "경기도 시흥시 금오로 103 (무지내동)",
+  "latitude": 37.413027,
+  "longitude": 126.840248,
+  "facilityType": "공공용시설",
+  "areaM2": 825.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199000003",
+  "name": "월곶동 풍림1차아파트 지하주차장 지하 1~2층",
+  "address": "경기도 시흥시 월곶중앙로70번길 11 (월곶동, 진주마을풍림1차아이원)",
+  "latitude": 37.389945,
+  "longitude": 126.7387,
+  "facilityType": "공공용시설",
+  "areaM2": 36930.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000002",
+  "name": "연성동 경기도노인전문 시흥병원 지하2층",
+  "address": "경기도 시흥시 하중로 285 (광석동, 경기도 노인전문 시흥병원)",
+  "latitude": 37.386283,
+  "longitude": 126.806948,
+  "facilityType": "공공용시설",
+  "areaM2": 995.95,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S202000002",
+  "name": "능곡동 장현마을2단지아파트 지하주차장 1~2층",
+  "address": "경기도 시흥시 시흥대로360번길 9 (능곡동, 장현마을2단지)",
+  "latitude": 37.372889,
+  "longitude": 126.809932,
+  "facilityType": "공공용시설",
+  "areaM2": 25073.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S202200004",
+  "name": "배곧2동 배곧C2호반써밋플레이스 지하주차장 1~2층",
+  "address": "경기도 시흥시 서울대학로264번길 12(배곧동, 시흥배곧 C2블럭 호반 써밋플레이스 아파트)",
+  "latitude": 37.36881,
+  "longitude": 126.725746,
+  "facilityType": "공공용시설",
+  "areaM2": 41187.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199900003",
+  "name": "장곡동 숲속마을 아파트 지하주차장 1층",
+  "address": "경기도 시흥시 인선길 63 (장곡동, 숲속마을아파트)",
+  "latitude": 37.377264,
+  "longitude": 126.781271,
+  "facilityType": "공공용시설",
+  "areaM2": 12238.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199600005",
+  "name": "정왕3동 신동아2차아파트 지하주차장 1층",
+  "address": "경기도 시흥시 정왕대로27번길 9 (정왕동)",
+  "latitude": 37.357476,
+  "longitude": 126.721151,
+  "facilityType": "공공용시설",
+  "areaM2": 5321.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S202000004",
+  "name": "은행동 네이처포레 아파트 지하주차장 1층",
+  "address": "경기도 시흥시 은계중앙로 140 (은행동, 네이처포레)",
+  "latitude": 37.439608,
+  "longitude": 126.806055,
+  "facilityType": "공공용시설",
+  "areaM2": 38264.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200500001",
+  "name": "정왕2동 주공5단지아파트 지하주차장 1층",
+  "address": "경기도 시흥시 정왕대로143번길 8 (정왕동)",
+  "latitude": 37.350731,
+  "longitude": 126.731997,
+  "facilityType": "공공용시설",
+  "areaM2": 8367.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S190000011",
+  "name": "군자동 동보아파트 지하주차장 1층",
+  "address": "경기도 시흥시 군자로335번길 11 (거모동, 동보아파트)",
+  "latitude": 37.357467,
+  "longitude": 126.774271,
+  "facilityType": "공공용시설",
+  "areaM2": 15272.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200000017",
+  "name": "연성동 참이슬아파트 지하주차장 1층",
+  "address": "경기도 시흥시 하중로209번길 9 (하중동, 참이슬아파트)",
+  "latitude": 37.393531,
+  "longitude": 126.806261,
+  "facilityType": "공공용시설",
+  "areaM2": 19906.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S202500001",
+  "name": "시흥금강펜테리움 오션베이아파트 지하주차장",
+  "address": "경기도 시흥시 거북섬남로 90 (정왕동, 시흥 금강펜테리움 오션베이)",
+  "latitude": 37.321233,
+  "longitude": 126.690843,
+  "facilityType": "공공용시설",
+  "areaM2": 32014.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201100043",
+  "name": "군자동 동하시티타워 지하주차장 1~2층",
+  "address": "경기도 시흥시 도일로112번길 5-5 (거모동, 동하시티타워아파트)",
+  "latitude": 37.341042,
+  "longitude": 126.78427,
+  "facilityType": "공공용시설",
+  "areaM2": 3205.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S190000014",
+  "name": "신천동 KT시흥지사 방송통신시설",
+  "address": "경기도 시흥시 신천로44번안길 15 (신천동)",
+  "latitude": 37.437736,
+  "longitude": 126.788186,
+  "facilityType": "공공용시설",
+  "areaM2": 1834.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199400005",
+  "name": "군자동 아주5차아파트 지하주차장 1층",
+  "address": "경기도 시흥시 군자로504번길 25 (거모동, 아주아파트)",
+  "latitude": 37.344449,
+  "longitude": 126.782044,
+  "facilityType": "공공용시설",
+  "areaM2": 1683.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199800010",
+  "name": "정왕4동 대림3단지아파트 지하주차장 지하 1층",
+  "address": "경기도 시흥시 함송로29번길 37 (정왕동)",
+  "latitude": 37.365209,
+  "longitude": 126.734325,
+  "facilityType": "공공용시설",
+  "areaM2": 4430.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000020",
+  "name": "정왕1동 건영5차아파트 지하주차장 1층",
+  "address": "경기도 시흥시 중심상가로 247, 시화평안마을건영5차아파트 지하1층 (정왕동)",
+  "latitude": 37.341368,
+  "longitude": 126.741463,
+  "facilityType": "공공용시설",
+  "areaM2": 8816.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200400044",
+  "name": "월곶동 풍림2차아파트 지하주차장 지하1층",
+  "address": "경기도 시흥시 월곶중앙로14번길 87 (월곶동, 월곶2차풍림아이원아파트)",
+  "latitude": 37.393385,
+  "longitude": 126.739986,
+  "facilityType": "공공용시설",
+  "areaM2": 38663.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199300003",
+  "name": "군자동 아주4차 402동 지하주차장 1층",
+  "address": "경기도 시흥시 도일로135번길 41 (거모동, 아주아파트)",
+  "latitude": 37.345547,
+  "longitude": 126.782575,
+  "facilityType": "공공용시설",
+  "areaM2": 726.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201100013",
+  "name": "은행동 대우푸르지오4차아파트 지하 1층 주차장",
+  "address": "경기도 시흥시 은행로 93-1 (은행동)",
+  "latitude": 37.440302,
+  "longitude": 126.79727,
+  "facilityType": "공공용시설",
+  "areaM2": 41770.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000029",
+  "name": "대야동 동신아파트 지하주차장 지하1층",
+  "address": "경기도 시흥시 대은로103번길 4 (대야동)",
+  "latitude": 37.445958,
+  "longitude": 126.799254,
+  "facilityType": "공공용시설",
+  "areaM2": 7243.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199900006",
+  "name": "매화동 삼화아파트 지하주차장",
+  "address": "경기도 시흥시 매화로 58 (매화동, 삼화아파트)",
+  "latitude": 37.414256,
+  "longitude": 126.814604,
+  "facilityType": "공공용시설",
+  "areaM2": 2931.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199600010",
+  "name": "정왕4동 미주아파트 지하주차장 지하 1층",
+  "address": "경기도 시흥시 정왕신길로49번길 26 (정왕동)",
+  "latitude": 37.359792,
+  "longitude": 126.728006,
+  "facilityType": "공공용시설",
+  "areaM2": 5190.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000040",
+  "name": "능곡동 휴먼시아9단지아파트 지하주차장 1층",
+  "address": "경기도 시흥시 능곡중앙로 34 (능곡동, 휴먼시아)",
+  "latitude": 37.366652,
+  "longitude": 126.812674,
+  "facilityType": "공공용시설",
+  "areaM2": 9545.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199600001",
+  "name": "정왕2동 삼성아파트 지하주차장 1층",
+  "address": "경기도 시흥시 정왕신길로139번길 5 (정왕동)",
+  "latitude": 37.353872,
+  "longitude": 126.734508,
+  "facilityType": "공공용시설",
+  "areaM2": 4612.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000010",
+  "name": "정왕2동 청솔아파트 지하주차장 1층",
+  "address": "경기도 시흥시 중심상가로 128 (정왕동)",
+  "latitude": 37.347689,
+  "longitude": 126.730665,
+  "facilityType": "공공용시설",
+  "areaM2": 5328.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200400015",
+  "name": "정왕본동 정왕프라자 지하주차장 1층",
+  "address": "경기도 시흥시 마유로418번길 18 (정왕동)",
+  "latitude": 37.351299,
+  "longitude": 126.74292,
+  "facilityType": "공공용시설",
+  "areaM2": 1172.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S190000010",
+  "name": "군자동 유호아파트 지하주차장 1층",
+  "address": "경기도 시흥시 황고개로206번길 43 (거모동)",
+  "latitude": 37.348328,
+  "longitude": 126.785734,
+  "facilityType": "공공용시설",
+  "areaM2": 6504.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200000006",
+  "name": "정왕3동 건영7차아파트 지하주차장 1층",
+  "address": "경기도 시흥시 정왕대로53번길 4 (정왕동)",
+  "latitude": 37.355509,
+  "longitude": 126.723755,
+  "facilityType": "공공용시설",
+  "areaM2": 2707.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201100031",
+  "name": "신천동 은하수드림힐아파트 지하주차장",
+  "address": "경기도 시흥시 신천5길 15 (신천동)",
+  "latitude": 37.437628,
+  "longitude": 126.780738,
+  "facilityType": "공공용시설",
+  "areaM2": 2186.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S190000005",
+  "name": "대야동 우성2차아파트 지하주차장 지하1층",
+  "address": "경기도 시흥시 은행로 208 (대야동)",
+  "latitude": 37.447513,
+  "longitude": 126.794464,
+  "facilityType": "공공용시설",
+  "areaM2": 2719.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200400045",
+  "name": "월곶동 풍림3차아파트 지하주차장 지하 1층",
+  "address": "경기도 시흥시 월곶중앙로 11 (월곶동, 월곶동풍림3차아파트)",
+  "latitude": 37.385918,
+  "longitude": 126.742744,
+  "facilityType": "공공용시설",
+  "areaM2": 15305.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000042",
+  "name": "능곡동 휴먼시아6단지아파트 지하주차장 1층",
+  "address": "경기도 시흥시 승지로 33 (능곡동, 휴먼시아)",
+  "latitude": 37.367281,
+  "longitude": 126.808885,
+  "facilityType": "공공용시설",
+  "areaM2": 5642.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000019",
+  "name": "정왕1동 대우아파트 지하주차장 1층",
+  "address": "경기도 시흥시 정왕대로298번길 6 (정왕동)",
+  "latitude": 37.341245,
+  "longitude": 126.744256,
+  "facilityType": "공공용시설",
+  "areaM2": 2432.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000009",
+  "name": "정왕2동 영남4차아파트 지하주차장 1층",
+  "address": "경기도 시흥시 정왕신길로139번길 16 (정왕동, 영남아파트)",
+  "latitude": 37.354373,
+  "longitude": 126.735612,
+  "facilityType": "공공용시설",
+  "areaM2": 2409.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000011",
+  "name": "정왕2동 건영3차아파트 지하주차장 1층",
+  "address": "경기도 시흥시 정왕대로117번길 10 (정왕동)",
+  "latitude": 37.352433,
+  "longitude": 126.729658,
+  "facilityType": "공공용시설",
+  "areaM2": 6848.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201600004",
+  "name": "정왕4동 삼환아파트 202동 지하실 1층",
+  "address": "경기도 시흥시 옥구천동로 433-26 (정왕동, 삼환아파트)",
+  "latitude": 37.360808,
+  "longitude": 126.730012,
+  "facilityType": "공공용시설",
+  "areaM2": 1500.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199300001",
+  "name": "군자동 보우아파트 지하주차장 1층",
+  "address": "경기도 시흥시 군자로504번길 9 (거모동, 보우아파트)",
+  "latitude": 37.344836,
+  "longitude": 126.783709,
+  "facilityType": "공공용시설",
+  "areaM2": 620.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199800006",
+  "name": "정왕3동 계룡2차아파트 지하주차장 1층",
+  "address": "경기도 시흥시 정왕대로28번길 8 (정왕동)",
+  "latitude": 37.35596,
+  "longitude": 126.719958,
+  "facilityType": "공공용시설",
+  "areaM2": 6195.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201100004",
+  "name": "정왕3동 스틸랜드 지하주차장 1층",
+  "address": "경기도 시흥시 오이도로 21 (정왕동)",
+  "latitude": 37.34694,
+  "longitude": 126.700533,
+  "facilityType": "공공용시설",
+  "areaM2": 2569.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199500001",
+  "name": "정왕2동 월드아파트 지하주차장 1층",
+  "address": "경기도 시흥시 옥구천동로 406 (정왕동)",
+  "latitude": 37.357098,
+  "longitude": 126.730435,
+  "facilityType": "공공용시설",
+  "areaM2": 3014.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S190000004",
+  "name": "대야동 우성1차아파트 지하주차장 지하1층",
+  "address": "경기도 시흥시 은행로 222 (대야동, 우성아파트)",
+  "latitude": 37.446446,
+  "longitude": 126.79368,
+  "facilityType": "공공용시설",
+  "areaM2": 3894.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200400016",
+  "name": "정왕본동 정왕오피스텔 지하주차장 1층",
+  "address": "경기도 시흥시 마유로418번길 24 (정왕동)",
+  "latitude": 37.351115,
+  "longitude": 126.743545,
+  "facilityType": "공공용시설",
+  "areaM2": 649.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S202200005",
+  "name": "배곧2동 한라비발디캠퍼스 2차 지하주차장 1~2층",
+  "address": "경기도 시흥시 배곧1로 27-16(배곧동, 한라비발디캠퍼스2차)",
+  "latitude": 37.362592,
+  "longitude": 126.713516,
+  "facilityType": "공공용시설",
+  "areaM2": 111347.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201100001",
+  "name": "신현동 경신아파트 전체 동의 지하주차장 1층",
+  "address": "경기도 시흥시 미산로 85-2 (미산동)",
+  "latitude": 37.420807,
+  "longitude": 126.797522,
+  "facilityType": "공공용시설",
+  "areaM2": 1547.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199200001",
+  "name": "군자동 아주3차아파트 지하주차장 1층",
+  "address": "경기도 시흥시 한우물로 35 (거모동, 아주아파트)",
+  "latitude": 37.345721,
+  "longitude": 126.783751,
+  "facilityType": "공공용시설",
+  "areaM2": 917.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000032",
+  "name": "능곡동 엘드수목토아파트 지하주차장 1층",
+  "address": "경기도 시흥시 능곡로 133 (능곡동, 시흥능곡 엘드수목토아파트)",
+  "latitude": 37.366226,
+  "longitude": 126.81518,
+  "facilityType": "공공용시설",
+  "areaM2": 15771.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201600006",
+  "name": "배곧1동 호반베르디움센트럴파크 지하주차장 지하1층",
+  "address": "경기도 시흥시 배곧3로 27-8(배곧동, 시흥배곧신도시 호반베르디움센트럴파크)",
+  "latitude": 37.374233,
+  "longitude": 126.725201,
+  "facilityType": "공공용시설",
+  "areaM2": 47021.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201500001",
+  "name": "정왕본동 푸르지오6차 2단지아파트 지하주차장 1~2층",
+  "address": "경기도 시흥시 죽율로 36 (죽율동)",
+  "latitude": 37.347712,
+  "longitude": 126.760836,
+  "facilityType": "공공용시설",
+  "areaM2": 23781.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201100039",
+  "name": "월곶동 유호N플러스빌 지하주차장 지하 1층",
+  "address": "경기도 시흥시 월곶중앙로 48 (월곶동, 유호아파트)",
+  "latitude": 37.38845,
+  "longitude": 126.740034,
+  "facilityType": "공공용시설",
+  "areaM2": 1414.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200400014",
+  "name": "정왕본동 역전프라자 지하주차장 1층",
+  "address": "경기도 시흥시 마유로 415 (정왕동)",
+  "latitude": 37.35187,
+  "longitude": 126.740702,
+  "facilityType": "공공용시설",
+  "areaM2": 4392.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201100005",
+  "name": "연성동 성원아파트 지하주차장 1층",
+  "address": "경기도 시흥시 하중로133번길 8 (하중동, 관곡마을성원아파트)",
+  "latitude": 37.398824,
+  "longitude": 126.801538,
+  "facilityType": "공공용시설",
+  "areaM2": 12841.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201100040",
+  "name": "월곶동 유호N플러스빌2차 지하주차장 지하 1~2층",
+  "address": "경기도 시흥시 월곶해안로161번길 25 (월곶동, 월곶Ⅱ 유호N플러스빌)",
+  "latitude": 37.389215,
+  "longitude": 126.734745,
+  "facilityType": "공공용시설",
+  "areaM2": 11366.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S190000008",
+  "name": "대야동 늘푸른벽산아파트 지하주차장 지하1층",
+  "address": "경기도 시흥시 은행로 233 (대야동)",
+  "latitude": 37.445821,
+  "longitude": 126.794714,
+  "facilityType": "공공용시설",
+  "areaM2": 4435.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199700002",
+  "name": "연성동 시흥시청 지하 1층",
+  "address": "경기도 시흥시 시청로 20 (장현동)",
+  "latitude": 37.37952,
+  "longitude": 126.803273,
+  "facilityType": "공공용시설",
+  "areaM2": 3634.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199800009",
+  "name": "정왕4동 동원아파트 지하주차장 지하 1층",
+  "address": "경기도 시흥시 봉화로 18 (정왕동)",
+  "latitude": 37.367257,
+  "longitude": 126.735886,
+  "facilityType": "공공용시설",
+  "areaM2": 6211.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201100007",
+  "name": "장곡동 대우우성아파트 지하주차장 1층",
+  "address": "경기도 시흥시 진말로 36 (장곡동, 진말 대우. 우성 아파트)",
+  "latitude": 37.38051,
+  "longitude": 126.785834,
+  "facilityType": "공공용시설",
+  "areaM2": 16420.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S200000003",
+  "name": "신현동 상아그린아파트 전체 동의 지하주차장 1층",
+  "address": "경기도 시흥시 미산로69번길 4 (미산동)",
+  "latitude": 37.422343,
+  "longitude": 126.796462,
+  "facilityType": "공공용시설",
+  "areaM2": 2423.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201000005",
+  "name": "장곡동 대우3차아파트 지하주차장 1층",
+  "address": "경기도 시흥시 진말로 10 (장곡동, 연성3차 대우아파트)",
+  "latitude": 37.378134,
+  "longitude": 126.785729,
+  "facilityType": "공공용시설",
+  "areaM2": 16740.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201100008",
+  "name": "장곡동 동양덱스빌아파트 지하주차장 1층",
+  "address": "경기도 시흥시 인선길 111 (장곡동, 매꼴마을 동양덱스빌 아파트)",
+  "latitude": 37.380656,
+  "longitude": 126.779593,
+  "facilityType": "공공용시설",
+  "areaM2": 11645.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S190000006",
+  "name": "대야동 서강1차아파트 지하주차장 지하1층",
+  "address": "경기도 시흥시 은행로218번길 4 (대야동)",
+  "latitude": 37.446693,
+  "longitude": 126.792771,
+  "facilityType": "공공용시설",
+  "areaM2": 488.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S199700001",
+  "name": "은행동 녹원아파트 지하주차장 1층",
+  "address": "경기도 시흥시 검바위2로 18 (은행동, 은행마을 녹원아파트)",
+  "latitude": 37.430848,
+  "longitude": 126.795835,
+  "facilityType": "공공용시설",
+  "areaM2": 5358.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201100002",
+  "name": "정왕3동 메가폴리스 지하주차장 1층",
+  "address": "경기도 시흥시 협력로 281 (정왕동)",
+  "latitude": 37.351824,
+  "longitude": 126.716036,
+  "facilityType": "공공용시설",
+  "areaM2": 21495.0,
+  "rampAvailable": null
+ },
+ {
+  "id": "shl_siheung_4010000-S201100037",
+  "name": "신천동 익스콘테크노빌 지하주차장",
+  "address": "경기도 시흥시 포도원로116번길 12 (신천동, 익스콘테크노빌)",
+  "latitude": 37.43443,
+  "longitude": 126.787481,
+  "facilityType": "공공용시설",
+  "areaM2": 403.0,
+  "rampAvailable": null
+ }
 ]

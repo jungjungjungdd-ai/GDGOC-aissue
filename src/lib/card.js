@@ -32,8 +32,9 @@ export function getLocalFallbackCard(disasterType) {
 // 행동 카드 가져오기: 서버(AI) → 실패하면 앱의 기본 카드
 export async function loadCard(alert, profile, location) {
   // 보호자 연락처는 서버로 보내지 않음 (API 명세서 2-2)
+  // 반려동물 항목은 기능에서 제외됨 → 예전에 저장된 값이 있어도 보내지 않음
   // eslint-disable-next-line no-unused-vars
-  const { guardian, ...profileToSend } = profile ?? {};
+  const { guardian, pets, ...profileToSend } = profile ?? {};
   try {
     const card = await createCard(alert.id, profileToSend, location);
     return normalize(card);
