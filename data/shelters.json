@@ -1,1 +1,12 @@
-[]
+[
+  { "id": "shl_mapo_001", "name": "망원 주민센터 대피소",   "address": "서울 마포구 망원동 샘플주소 1",  "latitude": 37.5562, "longitude": 126.9058, "rampAvailable": true,  "petAllowed": true  },
+  { "id": "shl_mapo_002", "name": "합정 체육관 대피소",     "address": "서울 마포구 합정동 샘플주소 2",  "latitude": 37.5498, "longitude": 126.9139, "rampAvailable": true,  "petAllowed": true  },
+  { "id": "shl_mapo_003", "name": "상암 문화센터 대피소",   "address": "서울 마포구 상암동 샘플주소 3",  "latitude": 37.5779, "longitude": 126.8916, "rampAvailable": true,  "petAllowed": true  },
+  { "id": "shl_mapo_004", "name": "서교 초등학교 대피소",   "address": "서울 마포구 서교동 샘플주소 4",  "latitude": 37.5531, "longitude": 126.9187, "rampAvailable": true,  "petAllowed": false },
+  { "id": "shl_mapo_005", "name": "공덕 복지관 대피소",     "address": "서울 마포구 공덕동 샘플주소 5",  "latitude": 37.5446, "longitude": 126.9515, "rampAvailable": true,  "petAllowed": false },
+  { "id": "shl_mapo_006", "name": "성산 공원 대피소",       "address": "서울 마포구 성산동 샘플주소 6",  "latitude": 37.5655, "longitude": 126.9089, "rampAvailable": false, "petAllowed": true  },
+  { "id": "shl_mapo_007", "name": "연남 커뮤니티홀 대피소", "address": "서울 마포구 연남동 샘플주소 7",  "latitude": 37.5627, "longitude": 126.9234, "rampAvailable": false, "petAllowed": true  },
+  { "id": "shl_mapo_008", "name": "도화 중학교 대피소",     "address": "서울 마포구 도화동 샘플주소 8",  "latitude": 37.5397, "longitude": 126.9488, "rampAvailable": false, "petAllowed": false },
+  { "id": "shl_mapo_009", "name": "신수 교회 대피소",       "address": "서울 마포구 신수동 샘플주소 9",  "latitude": 37.5468, "longitude": 126.9349, "rampAvailable": false, "petAllowed": false },
+  { "id": "shl_mapo_010", "name": "대흥 지하주차장 대피소", "address": "서울 마포구 대흥동 샘플주소 10", "latitude": 37.5508, "longitude": 126.9421, "rampAvailable": false, "petAllowed": false }
+]
