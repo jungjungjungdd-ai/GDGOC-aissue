@@ -164,3 +164,9 @@ a.btn-primary { display: block; text-align: center; text-decoration: none; }
   .demo-grid.single { grid-template-columns: 100%; }
 }
 .demo-link { display: block; text-align: center; margin-top: 24px; font-size: 15px; }
+
+/* 영향권 안내 · 개인정보 안내 */
+.area-notice { border-left: 4px solid #f9a825; line-height: 1.5; }
+.privacy-note { margin-top: 20px; padding: 12px 14px; border-radius: 10px; background: #f1f5f9; color: #455a64; font-size: 14px; }
+.privacy-note ul { margin: 6px 0 0; padding-left: 18px; }
+.privacy-note li { margin-bottom: 2px; }

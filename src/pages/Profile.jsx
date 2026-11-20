@@ -1,6 +1,7 @@
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import ProfileForm from '../components/ProfileForm.jsx';
 import { getProfile, saveProfile, getDraftLanguage, clearDraftLanguage } from '../lib/storage.js';
+import PrivacyNote from '../components/PrivacyNote.jsx';
 
 // 최초 프로필 등록 화면 (온보딩 → 언어 선택 → 여기)
 export default function Profile() {
@@ -24,6 +25,7 @@ export default function Profile() {
       <h1>내 상황을 알려주세요</h1>
       <p className="muted">재난이 났을 때 나에게 맞는 행동을 알려 드리기 위해 필요해요. 이 정보는 내 폰에만 저장돼요.</p>
       <ProfileForm initial={{ language }} submitLabel="저장하고 시작하기" onSubmit={handleSubmit} />
+      <PrivacyNote variant="profile" />
     </div>
   );
 }
