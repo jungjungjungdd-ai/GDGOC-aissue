@@ -70,7 +70,10 @@ export default function Card() {
         </p>
       )}
       {card.fallback && (
-        <p className="notice">기본 안내를 보여 드리고 있어요. (맞춤 안내를 불러오지 못했어요)</p>
+        <p className="notice">
+          기본 안내를 보여 드리고 있어요. (맞춤 안내를 불러오지 못했어요)
+          {card.debugReason && <><br /><small>[개발용] {card.debugReason}</small></>}
+        </p>
       )}
 
       {SECTIONS.map((s) => {

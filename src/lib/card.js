@@ -15,6 +15,7 @@ function normalize(card, extra = {}) {
     },
     sources: card.sources ?? [],
     fallback: card.fallback ?? false,
+    debugReason: card.debugReason, // 로컬 개발에서만 서버가 보내 줌
     ...extra,
   };
 }
@@ -35,7 +36,9 @@ export async function loadCard(alert, profile, location) {
   try {
     const card = await createCard(alert.id, profileToSend, location);
     return normalize(card);
-  } catch {
-    return getLocalFallbackCard(alert.disasterType);
+  } catch (error) {
+    const card = getLocalFallbackCard(alert.disasterType);
+    if (card && import.meta.env.DEV) card.debugReason = 'API 요청 실패: ' + (error?.message ?? error);
+    return card;
   }
 }
