@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PrivacyNote from '../components/PrivacyNote.jsx';
 import ProfileForm from '../components/ProfileForm.jsx';
 import { getProfile, saveProfile } from '../lib/storage.js';
+import TestPushPanel from '../components/TestPushPanel.jsx';
 
 // 마이 화면: 프로필 확인·수정
 export default function My() {
@@ -25,6 +26,7 @@ export default function My() {
       {saved && <p className="toast" role="status">저장됐어요 ✓</p>}
       <ProfileForm key={formKey} initial={profile ?? undefined} showLanguage submitLabel="수정 내용 저장" onSubmit={handleSubmit} />
       <PrivacyNote variant="profile" />
+            <TestPushPanel />
       <Link to="/demo" className="link demo-link">🎬 데모 모드 (프로필별 카드 비교)</Link>
     </div>
   );
