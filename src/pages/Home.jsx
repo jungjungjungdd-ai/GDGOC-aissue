@@ -13,7 +13,7 @@ export default function Home() {
 
   useEffect(() => {
     getAlerts()
-      .then((d) => setAlerts(Array.isArray(d) ? d : d.items ?? []))
+      .then((d) => setAlerts(Array.isArray(d) ? d : d.items ?? d.alerts ?? []))
       .catch(() => setAlerts([]))
       .finally(() => setLoading(false));
   }, []);
