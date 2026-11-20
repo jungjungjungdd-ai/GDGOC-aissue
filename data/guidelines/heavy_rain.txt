@@ -181,3 +181,65 @@ source_url: https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do
 외국인: 별도 행동요령 없음
 반려동물: 별도 행동요령 없음
 
+[chunk_id: heavy_rain_outdoor_avoid]
+disaster_type: heavy_rain
+phase: during
+target: [general]
+keywords: [야외, 산사태, 침수, 위험지역, 대피]
+content: 자주 물에 잠기는 지역·산사태 위험지역 등 위험한 곳은 피하고 안전한 곳으로 대피
+source_url: https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=heavyRain&actsHeaderTitle=%ED%98%B8%EC%9A%B0&menuSn=4
+원문 단계 표기: 장소별 행동요령 (2026-11 추가, 국민재난안전포털 원문 기준)
+
+[chunk_id: heavy_rain_outdoor_valley]
+disaster_type: heavy_rain
+phase: during
+target: [general]
+keywords: [야외, 산간, 계곡, 등산, 비탈면]
+content: 산과 계곡에서는 계곡이나 비탈면 가까이 가지 않고 안전한 곳으로 대피
+source_url: https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=heavyRain&actsHeaderTitle=%ED%98%B8%EC%9A%B0&menuSn=4
+원문 단계 표기: 장소별 행동요령 (2026-11 추가, 국민재난안전포털 원문 기준)
+
+[chunk_id: heavy_rain_outdoor_falling]
+disaster_type: heavy_rain
+phase: during
+target: [general]
+keywords: [야외, 간판, 유리창, 낙하물, 공사장]
+content: 강풍 낙하물 위험이 있는 유리창·간판·공사장 근처를 피해 공터나 건물 안으로 대피
+source_url: https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=heavyRain&actsHeaderTitle=%ED%98%B8%EC%9A%B0&menuSn=4
+원문 단계 표기: 장소별 행동요령 (2026-11 추가, 국민재난안전포털 원문 기준)
+
+[chunk_id: heavy_rain_vehicle_slow]
+disaster_type: heavy_rain
+phase: during
+target: [general]
+keywords: [차량, 자동차, 운전, 도로, 하천변]
+content: 차량은 속도를 줄여 운행하고 개울가·하천변·해안가 등 침수 위험지역에 접근하지 말고 주변 사람에게 알리기
+source_url: https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=heavyRain&actsHeaderTitle=%ED%98%B8%EC%9A%B0&menuSn=4
+원문 단계 표기: 장소별 행동요령 (2026-11 추가, 국민재난안전포털 원문 기준)
+
+[chunk_id: heavy_rain_vehicle_underpass]
+disaster_type: heavy_rain
+phase: during
+target: [general]
+keywords: [차량, 자동차, 지하차도, 도로, 침수]
+content: 조금이라도 침수된 지하차도와 도로는 절대 지나가지 않기
+source_url: https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=heavyRain&actsHeaderTitle=%ED%98%B8%EC%9A%B0&menuSn=4
+원문 단계 표기: 장소별 행동요령 (2026-11 추가, 국민재난안전포털 원문 기준)
+
+[chunk_id: heavy_rain_coast_avoid]
+disaster_type: heavy_rain
+phase: during
+target: [general]
+keywords: [해안, 해안가, 바닷가, 하천, 급류]
+content: 개울가·하천변·해안가 등 침수 위험지역은 급류에 휩쓸릴 수 있으니 가까이 가지 않기
+source_url: https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=heavyRain&actsHeaderTitle=%ED%98%B8%EC%9A%B0&menuSn=4
+원문 단계 표기: 장소별 행동요령 (2026-11 추가, 국민재난안전포털 원문 기준)
+
+[chunk_id: heavy_rain_coast_together]
+disaster_type: heavy_rain
+phase: during
+target: [general, family]
+keywords: [해안, 방파제, 계곡, 하천, 함께 이동]
+content: 산간·계곡·하천·방파제 등 위험지역에서는 주변 사람들과 함께 안전한 곳으로 이동
+source_url: https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=heavyRain&actsHeaderTitle=%ED%98%B8%EC%9A%B0&menuSn=4
+원문 단계 표기: 장소별 행동요령 (2026-11 추가, 국민재난안전포털 원문 기준)

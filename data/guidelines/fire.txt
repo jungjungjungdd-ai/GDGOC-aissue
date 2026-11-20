@@ -99,3 +99,12 @@ source_url: https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do
 장애인: 별도 행동요령 없음
 반려동물: 별도 행동요령 없음
 가족: 별도 호칭은 없으나 안전 장소에서 일행 인원 확인 행동 포함
+
+[chunk_id: fire_smoke_cover]
+disaster_type: fire
+phase: during
+target: [general]
+keywords: [연기, 젖은 손수건, 코와 입, 연기 흡입]
+content: 젖은 손수건으로 코와 입을 막고 침착하게 대피
+source_url: https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=fires&actsHeaderTitle=%ED%99%94%EC%9E%AC&menuSn=4
+원문 단계 표기: 장소별 행동요령 (2026-11 추가, 국민재난안전포털 원문 기준)

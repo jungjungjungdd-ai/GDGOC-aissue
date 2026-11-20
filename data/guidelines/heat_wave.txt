@@ -136,3 +136,30 @@ source_url: https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do
 장애인: 장애인 명시 항목 없음; 거동이 불편한 노인·환자에 대한 확인 행동 포함
 반려동물: 별도 행동요령 없음
 가족: 온열질환 대처 준비와 무더위 용품 점검 포함
+
+[chunk_id: heat_wave_outdoor_gear]
+disaster_type: heat_wave
+phase: during
+target: [general]
+keywords: [야외, 외출, 모자, 물병, 가벼운 옷차림]
+content: 외출이 꼭 필요하면 챙이 넓은 모자와 가벼운 옷차림을 하고 물병을 반드시 휴대
+source_url: https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=heatWave&actsHeaderTitle=%ED%8F%AD%EC%97%BC&menuSn=4
+원문 단계 표기: 장소별 행동요령 (2026-11 추가, 국민재난안전포털 원문 기준)
+
+[chunk_id: heat_wave_outdoor_hours]
+disaster_type: heat_wave
+phase: during
+target: [general]
+keywords: [야외, 실외 작업, 오후 2~5시, 그늘, 휴식]
+content: 가장 더운 오후 2~5시에는 실외 작업을 되도록 하지 않고, 작업장에서는 물·그늘·휴식 수칙 지키기
+source_url: https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=heatWave&actsHeaderTitle=%ED%8F%AD%EC%97%BC&menuSn=4
+원문 단계 표기: 장소별 행동요령 (2026-11 추가, 국민재난안전포털 원문 기준)
+
+[chunk_id: heat_wave_vehicle_alone]
+disaster_type: heat_wave
+phase: during
+target: [general, child, elderly, caregiver, family]
+keywords: [차량, 자동차, 차 안, 어린이, 노약자]
+content: 창문이 닫힌 자동차 안에 노약자나 어린이를 홀로 남겨두지 않기
+source_url: https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=heatWave&actsHeaderTitle=%ED%8F%AD%EC%97%BC&menuSn=4
+원문 단계 표기: 장소별 행동요령 (2026-11 추가, 국민재난안전포털 원문 기준)
