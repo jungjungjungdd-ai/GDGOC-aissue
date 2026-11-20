@@ -3,8 +3,9 @@ import path from 'path';
 
 // GET /api/shelters : 조건별 대피소 (거리순) - 명세서 6-1
 
-// 좌표가 없을 때 쓸 샘플 지역(마포구) 중심 좌표
-const DEFAULT_CENTER = { latitude: 37.5663, longitude: 126.9019 };
+// 좌표가 없을 때 기준점: 시흥시 민방위대피시설 전체의 평균 위치
+const DEFAULT_CENTER = { latitude: 37.3862, longitude: 126.7766 };
+const DATA_SOURCE = '경기 시흥시 민방위대피시설 현황(공공데이터)';
 const DEFAULT_LIMIT = 5;
 const MAX_LIMIT = 10;
 
@@ -91,8 +92,9 @@ export default function handler(req, res) {
     const shelters = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 
     const items = shelters
-      .filter((s) => !needRamp || s.rampAvailable) // 휠체어면 경사로 있는 곳만
-      .filter((s) => !needPet || s.petAllowed)     // 반려동물이면 동반 가능한 곳만
+      // 공공데이터에는 경사로·반려동물 정보가 없음(null) → '없음(false)'으로 확인된 곳만 제외
+      .filter((s) => !needRamp || s.rampAvailable !== false)
+      .filter((s) => !needPet || s.petAllowed !== false)
       .map((s) => ({
         ...s,
         distanceM: Math.round(getDistanceM(base.latitude, base.longitude, s.latitude, s.longitude)),
@@ -101,7 +103,7 @@ export default function handler(req, res) {
       .sort((a, b) => a.distanceM - b.distanceM) // 가까운 순
       .slice(0, maxCount);                       // limit 개수만
 
-    return res.status(200).json({ dataStatus: 'sample', baseLocation, items });
+    return res.status(200).json({ dataStatus: 'public', source: DATA_SOURCE, baseLocation, items });
   } catch (e) {
     return sendError(res, 500, 'SERVER_ERROR', '대피소 정보를 불러오지 못했습니다.');
   }
