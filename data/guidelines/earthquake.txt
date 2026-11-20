@@ -120,3 +120,57 @@ source_url: https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do
 장애인: 시각·지체·청각·발달장애 행동요령 포함
 반려동물: 별도 행동요령 없음
 가족: 사전 대피·연락 계획 및 대피 후 안전 확인 포함
+
+[chunk_id: earthquake_outdoor_head]
+disaster_type: earthquake
+phase: during
+target: [general]
+keywords: [야외, 건물 밖, 머리 보호, 가방]
+content: 건물 밖에서는 가방이나 손으로 머리를 보호하며 건물과 거리를 두고 주위를 살피며 대피
+source_url: https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=earthQuake&actsHeaderTitle=%EC%A7%80%EC%A7%84&menuSn=4
+원문 단계 표기: 장소별 행동요령 (2026-11 추가, 국민재난안전포털 원문 기준)
+
+[chunk_id: earthquake_outdoor_open]
+disaster_type: earthquake
+phase: during
+target: [general]
+keywords: [야외, 운동장, 공원, 넓은 공간, 차량 이용 금지]
+content: 떨어지는 물건에 유의하며 운동장·공원 등 넓은 공간으로 신속히 대피(차량 이용 금지)
+source_url: https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=earthQuake&actsHeaderTitle=%EC%A7%80%EC%A7%84&menuSn=4
+원문 단계 표기: 장소별 행동요령 (2026-11 추가, 국민재난안전포털 원문 기준)
+
+[chunk_id: earthquake_vehicle_stop]
+disaster_type: earthquake
+phase: during
+target: [general]
+keywords: [차량, 자동차, 운전, 도로, 비상등]
+content: 운전 중에는 비상등을 켜고 서서히 속도를 줄여 도로 오른쪽에 차를 세우고, 라디오 정보를 들으며 키를 꽂아 둔 채 대피
+source_url: https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=earthQuake&actsHeaderTitle=%EC%A7%80%EC%A7%84&menuSn=4
+원문 단계 표기: 장소별 행동요령 (2026-11 추가, 국민재난안전포털 원문 기준)
+
+[chunk_id: earthquake_coast_tsunami]
+disaster_type: earthquake
+phase: during
+target: [general]
+keywords: [해안, 해안가, 바닷가, 지진해일, 높은 곳]
+content: 해안에서 지진해일 특보가 발령되면 높은 곳으로 이동
+source_url: https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=earthQuake&actsHeaderTitle=%EC%A7%80%EC%A7%84&menuSn=4
+원문 단계 표기: 장소별 행동요령 (2026-11 추가, 국민재난안전포털 원문 기준)
+
+[chunk_id: earthquake_mountain]
+disaster_type: earthquake
+phase: during
+target: [general]
+keywords: [야외, 산간, 산사태, 절벽]
+content: 산에서는 산사태·절벽 붕괴에 주의하고 안전한 곳으로 대피
+source_url: https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=earthQuake&actsHeaderTitle=%EC%A7%80%EC%A7%84&menuSn=4
+원문 단계 표기: 장소별 행동요령 (2026-11 추가, 국민재난안전포털 원문 기준)
+
+[chunk_id: earthquake_subway]
+disaster_type: earthquake
+phase: during
+target: [general]
+keywords: [지하, 지하철, 전철, 기둥]
+content: 지하철에서는 손잡이나 기둥을 잡아 넘어지지 않게 하고, 전철이 멈추면 안내에 따라 행동
+source_url: https://www.safekorea.go.kr/safekorea-kor/acts/nacts/action-guide.do?category=earthQuake&actsHeaderTitle=%EC%A7%80%EC%A7%84&menuSn=4
+원문 단계 표기: 장소별 행동요령 (2026-11 추가, 국민재난안전포털 원문 기준)

@@ -428,8 +428,23 @@ function phaseScore(phase, alertText) {
 }
 
 // 건물 안에 있어야 의미 있는 행동 (문손잡이, 계단, 엘리베이터 등)
-const INDOOR_ONLY = /문손잡이|계단|엘리베이터|승강기|완강기|경량칸막이|대피공간|비상벨|창문|실내|가스 ?밸브|전기 ?차단|욕조|탁자|식탁/;
+const INDOOR_ONLY = /문손잡이|계단|엘리베이터|승강기|완강기|경량칸막이|대피공간|비상벨|창문|가스 ?밸브|전기 ?차단|욕조|탁자|식탁/;
 const OUTSIDE_PLACES = new Set(["outdoors", "coast", "vehicle", "car"]);
+
+// 장소 전용 청크 (청크 ID 이름으로 구분): 그 장소일 때만 우선, 아니면 뒤로
+const PLACE_OF_CHUNK = [
+  [/_(outdoor|mountain)_?/, ["outdoors"]],
+  [/_vehicle_/, ["vehicle", "car"]],
+  [/_coast_/, ["coast"]],
+  [/_(subway|underground)/, ["underground"]],
+];
+
+function placeBonus(chunk, locationType) {
+  for (const [pattern, places] of PLACE_OF_CHUNK) {
+    if (pattern.test(chunk.id)) return places.includes(locationType) ? 8 : -10;
+  }
+  return 0;
+}
 
 function chunkText(chunk) {
   return [chunk.content, ...chunk.keywords].join(" ");
@@ -455,7 +470,12 @@ function retrieveChunks(guideline, profile, location, alert) {
   // 밖(해안가·야외·차 안)에 있으면 건물 안 전용 행동은 빼고 고른다
   const outside = OUTSIDE_PLACES.has(location.type);
   const placeFit = outside
-    ? byTarget.filter((chunk) => !INDOOR_ONLY.test(chunkText(chunk)))
+    ? byTarget.filter(
+        (chunk) =>
+          // 현재 장소 키워드가 붙은 청크(예: 차 안 + 창문 닫힌 차)는 유지
+          chunk.keywords.some((k) => location.keywords.includes(k)) ||
+          !INDOOR_ONLY.test(chunkText(chunk))
+      )
     : byTarget;
   const candidates = placeFit.length ? placeFit : byTarget;
 
@@ -471,6 +491,7 @@ function retrieveChunks(guideline, profile, location, alert) {
       targetMatches * 5 +
       keywordMatches * 3 +
       phaseScore(chunk.phase, alertText) +
+      placeBonus(chunk, location.type) +
       (chunk.targets.includes("general") ? 1 : 0)
     );
   };
