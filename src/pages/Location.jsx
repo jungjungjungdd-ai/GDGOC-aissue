@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { loadAlert } from '../lib/alerts.js';
+import { checkImpact } from '../lib/region.js';
+import PrivacyNote from '../components/PrivacyNote.jsx';
 
 // 장소 선택지 (값은 API 명세서 1-4 placeType)
 const PLACES = [
@@ -51,6 +53,9 @@ export default function Location() {
     );
   }, []);
 
+  // 재난 지역과 현재 위치 비교 (좌표가 있을 때만)
+  const impact = alert && coords ? checkImpact(alert.area, coords) : null;
+
   // 장소를 누르면 바로 행동 카드 화면으로 (좌표는 있으면 같이 전달)
   const choose = (placeType) => {
     navigate(`/alerts/${id}/card`, {
@@ -75,6 +80,14 @@ export default function Location() {
 
       <h1>지금 어디에 있나요?</h1>
       <p className={gps === 'ok' || gps === 'locating' ? 'muted' : 'notice'}>{GPS_MESSAGE[gps]}</p>
+      {impact?.status === 'outside' && (
+        <div className="notice area-notice" role="status">
+          <strong>지금 위치는 재난 지역({alert.area}) 밖이에요.</strong>
+          <br />
+          약 {(impact.distanceM / 1000).toFixed(1)}km 떨어져 있어요. 그 지역으로 가는 중이거나 가족이 그곳에 있다면
+          아래에서 장소를 골라 행동 요령을 확인하세요.
+        </div>
+      )}
 
       <div className="place-grid">
         {PLACES.map((p) => (
@@ -85,7 +98,7 @@ export default function Location() {
         ))}
       </div>
 
-      <p className="muted small">위치는 행동 카드를 만들 때만 쓰고 저장하지 않아요.</p>
+      <PrivacyNote variant="location" />
     </div>
   );
 }
