@@ -41,7 +41,8 @@ export default function handler(req, res) {
     return sendError(res, 405, 'METHOD_NOT_ALLOWED', 'GET 요청만 가능합니다.');
   }
 
-  const { lat, lng, wheelchair, pet, limit } = req.query;
+  // pet은 더 이상 쓰지 않음 (반려동물 필터 제외 결정, 보내도 무시)
+  const { lat, lng, wheelchair, limit } = req.query;
 
   // 1. 위치 확인: lat, lng는 둘 다 있거나 둘 다 없어야 함
   const hasLat = lat !== undefined && lat !== '';
@@ -72,10 +73,6 @@ export default function handler(req, res) {
   if (needRamp === null) {
     return sendError(res, 400, 'VALIDATION_ERROR', 'wheelchair는 true 또는 false여야 합니다.', 'wheelchair');
   }
-  const needPet = parseBoolean(pet);
-  if (needPet === null) {
-    return sendError(res, 400, 'VALIDATION_ERROR', 'pet은 true 또는 false여야 합니다.', 'pet');
-  }
 
   // 3. 개수 확인 (기본 5, 최대 10)
   let maxCount = DEFAULT_LIMIT;
@@ -94,7 +91,6 @@ export default function handler(req, res) {
     const items = shelters
       // 공공데이터에는 경사로·반려동물 정보가 없음(null) → '없음(false)'으로 확인된 곳만 제외
       .filter((s) => !needRamp || s.rampAvailable !== false)
-      .filter((s) => !needPet || s.petAllowed !== false)
       .map((s) => ({
         ...s,
         distanceM: Math.round(getDistanceM(base.latitude, base.longitude, s.latitude, s.longitude)),

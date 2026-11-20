@@ -39,7 +39,6 @@ for r in rows:
         "areaM2": float(area) if area else None,
         # 공공데이터에 없는 정보 → null (알 수 없음)
         "rampAvailable": None,
-        "petAllowed": None,
     })
 
 OUT.write_text(json.dumps(items, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")

@@ -19,7 +19,6 @@ export default function Shelters() {
   const { state } = useLocation();
   const profile = getProfile();
   const wheelchair = profile?.mobility === 'wheelchair';
-  const pet = (profile?.pets?.length ?? 0) > 0;
 
   const [result, setResult] = useState(null);
   const [alert, setAlert] = useState(null);
@@ -35,7 +34,6 @@ export default function Shelters() {
         lat: coords?.latitude,
         lng: coords?.longitude,
         wheelchair,
-        pet,
       });
       if (alive) setResult(r);
     })();
@@ -43,7 +41,7 @@ export default function Shelters() {
       loadAlert(state.alertId).then((a) => alive && setAlert(a)).catch(() => {});
     }
     return () => { alive = false; };
-  }, [state, wheelchair, pet]);
+  }, [state, wheelchair]);
 
   useEffect(() => {
     if (!toast) return;
@@ -75,9 +73,9 @@ export default function Shelters() {
   return (
     <div className="screen">
       <h1>가까운 대피소</h1>
-      {(wheelchair || pet) && (
+      {wheelchair && (
         <p className="notice small">
-          공공데이터에는 {[wheelchair && '경사로', pet && '반려동물 동반'].filter(Boolean).join('·')} 정보가 없어요.
+          공공데이터에는 경사로 정보가 없어요.
           이동하기 전에 시설에 꼭 확인하세요.
         </p>
       )}
@@ -114,7 +112,6 @@ export default function Shelters() {
                 <div className="shelter-tags">
                   {s.facilityType && <span className="badge">{s.facilityType}</span>}
                   {s.rampAvailable && <span className="badge">♿ 경사로</span>}
-                  {s.petAllowed && <span className="badge">🐾 반려동물</span>}
                 </div>
                 <div className="shelter-actions">
                   <a className="btn-primary" href={s.mapUrl} target="_blank" rel="noreferrer">

@@ -21,12 +21,12 @@ export function distanceM(lat1, lng1, lat2, lng2) {
 }
 
 // API가 없거나 실패하면 앱에 들어 있는 같은 공공데이터로 직접 계산
-function localShelters({ lat, lng, wheelchair, pet, limit }) {
+function localShelters({ lat, lng, wheelchair, limit }) {
   const hasGps = lat != null && lng != null;
   const base = hasGps ? { lat, lng } : DEFAULT_CENTER;
   const items = shelterData
     // 경사로·반려동물 정보가 없는(null) 곳은 빼지 않음
-    .filter((s) => (!wheelchair || s.rampAvailable !== false) && (!pet || s.petAllowed !== false))
+    .filter((s) => !wheelchair || s.rampAvailable !== false)
     .map((s) => ({
       ...s,
       distanceM: distanceM(base.lat, base.lng, s.latitude, s.longitude),
@@ -37,9 +37,9 @@ function localShelters({ lat, lng, wheelchair, pet, limit }) {
   return { dataStatus: 'public', source: DATA_SOURCE, baseLocation: hasGps ? 'gps' : 'default', items };
 }
 
-export async function loadShelters({ lat, lng, wheelchair = false, pet = false, limit = 5 }) {
+export async function loadShelters({ lat, lng, wheelchair = false, limit = 5 }) {
   try {
-    const query = { wheelchair, pet, limit };
+    const query = { wheelchair, limit };
     if (lat != null && lng != null) Object.assign(query, { lat, lng });
     const data = await getShelters(query);
     if (!Array.isArray(data?.items)) throw new Error('bad response');
@@ -51,7 +51,7 @@ export async function loadShelters({ lat, lng, wheelchair = false, pet = false, 
       })),
     };
   } catch {
-    return localShelters({ lat, lng, wheelchair, pet, limit });
+    return localShelters({ lat, lng, wheelchair, limit });
   }
 }
 
