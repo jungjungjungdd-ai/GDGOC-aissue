@@ -471,7 +471,7 @@ function retrieveChunks(guideline, profile, location, alert) {
 
   const selected = [];
   const seen = new Set();
-  for (const chunk of [...specific.slice(0, 8), ...general.slice(0, 12)]) {
+  for (const chunk of [...specific.slice(0, 5), ...general.slice(0, 7)]) {
     if (!seen.has(chunk.id)) {
       seen.add(chunk.id);
       selected.push(chunk);
@@ -555,18 +555,16 @@ function parseAndValidateResponse(text, allowedEvidenceIds) {
 }
 
 // 붐빌 때(503)·사용량 초과(429)는 잠깐 쉬고 재시도 → 그래도 안 되면 다음 모델로
-const TRANSIENT = /\b(503|429|500)\b|UNAVAILABLE|RESOURCE_EXHAUSTED|overloaded|high demand/i;
+const TRANSIENT = /\b(503|429|500)\b|UNAVAILABLE|RESOURCE_EXHAUSTED|overloaded|high demand|timed? ?out|abort/i;
 
 function modelCandidates() {
   const primary = process.env.GEMINI_MODEL || "gemini-3.8-flash";
-  const backups = (process.env.GEMINI_FALLBACK_MODELS || "gemini-3.7-flash,gemini-3.5-flash")
+  const backups = (process.env.GEMINI_FALLBACK_MODELS || "gemini-3.5-flash-lite,gemini-3.7-flash")
     .split(",")
     .map((m) => m.trim())
     .filter(Boolean);
   return [...new Set([primary, ...backups])];
 }
-
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 async function callGemini(promptData, retryMessage) {
   const apiKey = process.env.GEMINI_API_KEY;
@@ -582,6 +580,8 @@ async function callGemini(promptData, retryMessage) {
 
   let lastError;
   for (const model of modelCandidates()) {
+    // 붐비는 모델은 기다리지 않고 바로 다음 모델로 (속도 우선)
+    let useThinkingConfig = true;
     for (let attempt = 0; attempt < 2; attempt += 1) {
       try {
         return await ai.models.generateContent({
@@ -591,6 +591,10 @@ async function callGemini(promptData, retryMessage) {
             systemInstruction: SYSTEM_INSTRUCTION,
             responseMimeType: "application/json",
             responseJsonSchema: CARD_SCHEMA,
+            // 생각(thinking)을 줄여서 응답 속도 단축 (3.8-flash 기본값은 medium)
+            ...(useThinkingConfig ? { thinkingConfig: { thinkingLevel: "LOW" } } : {}),
+            // SDK 자체 재시도를 끄고(우리 코드가 모델 전환), 한 번에 최대 12초
+            httpOptions: { timeout: 12000, retryOptions: { attempts: 1 } },
           },
         });
       } catch (error) {
@@ -598,9 +602,14 @@ async function callGemini(promptData, retryMessage) {
         const message = String(error?.message || "");
         console.warn("[card] " + model + " 실패(" + (attempt + 1) + "회):", message.slice(0, 120));
         // 모델 이름이 없을 때(404)는 바로 다음 모델로, 그 외 영구 오류는 중단
+        // 모델이 thinking 설정을 안 받으면 설정 빼고 같은 모델로 한 번 더
+        if (useThinkingConfig && /thinking/i.test(message)) {
+          useThinkingConfig = false;
+          continue;
+        }
         if (/\b404\b|NOT_FOUND/i.test(message)) break;
         if (!TRANSIENT.test(message)) throw error;
-        if (attempt === 0) await sleep(800);
+        break; // 붐비면 기다리지 않고 바로 다음 모델로
       }
     }
   }
@@ -731,15 +740,17 @@ export async function createActionCard({ alertId, profile = {}, location = {} })
     chunks
   );
 
+  const startedAt = Date.now();
   const generated = await generateValidatedCard(promptData, chunks);
+  const tookMs = Date.now() - startedAt;
   if (!generated) {
     const card = makeFallback(disasterType, alertId, fallbackData, guideline);
     if (IS_DEV && lastFailure) card.debugReason = lastFailure;
-    writeDevLog(alertId + " 기본 카드: " + (lastFailure || "이유 없음"));
+    writeDevLog(alertId + " 기본 카드 (" + tookMs + "ms): " + (lastFailure || "이유 없음"));
     return card;
   }
 
-  writeDevLog(alertId + " 맞춤 카드 생성 성공");
+  writeDevLog(alertId + " 맞춤 카드 생성 성공 (" + tookMs + "ms)");
   const sections = {};
   for (const sectionName of ["now", "within10Minutes", "doNot"]) {
     sections[sectionName] = generated.sections[sectionName].map((action) => ({
