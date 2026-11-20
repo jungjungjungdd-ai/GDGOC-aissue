@@ -8,6 +8,7 @@ import Location from './pages/Location.jsx';
 import Card from './pages/Card.jsx';
 import Shelters from './pages/Shelters.jsx';
 import My from './pages/My.jsx';
+import Demo from './pages/Demo.jsx';
 import RequireProfile from './components/RequireProfile.jsx';
 
 export default function App() {
@@ -26,6 +27,9 @@ export default function App() {
       <Route path="/profile" element={<Profile />} />
       <Route path="/alerts/:id/location" element={<Location />} />
       <Route path="/alerts/:id/card" element={<Card />} />
+
+      {/* 시연 영상용 비교 화면 */}
+      <Route path="/demo" element={<Demo />} />
 
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
