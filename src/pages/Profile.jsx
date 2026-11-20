@@ -2,6 +2,7 @@ import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import ProfileForm from '../components/ProfileForm.jsx';
 import { getProfile, saveProfile, getDraftLanguage, clearDraftLanguage } from '../lib/storage.js';
 import PrivacyNote from '../components/PrivacyNote.jsx';
+import { buildOfflineBundle } from '../lib/offline.js';
 
 // 최초 프로필 등록 화면 (온보딩 → 언어 선택 → 여기)
 export default function Profile() {
@@ -15,6 +16,7 @@ export default function Profile() {
 
   const handleSubmit = (profile) => {
     saveProfile(profile);
+    buildOfflineBundle(profile); // 오프라인 카드 미리 만들기 (기다리지 않음)
     clearDraftLanguage();
     // TODO(웹 푸시 이슈): 알림 권한 요청 화면이 생기면 그쪽으로 이동
     navigate('/', { replace: true });

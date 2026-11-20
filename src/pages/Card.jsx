@@ -69,7 +69,14 @@ export default function Card() {
           <strong>{alert.title}</strong> · {alert.area}
         </p>
       )}
-      {card.fallback && (
+      {card.offline && (
+        <p className="notice">
+          {navigator.onLine
+            ? '맞춤 안내를 새로 받지 못해 미리 저장한 카드를 보여 드려요. (집에 있을 때 기준)'
+            : '📵 인터넷이 안 돼서 미리 저장한 카드를 보여 드려요. (집에 있을 때 기준)'}
+        </p>
+      )}
+      {card.fallback && !card.offline && (
         <p className="notice">
           기본 안내를 보여 드리고 있어요. (맞춤 안내를 불러오지 못했어요)
           {card.debugReason && <><br /><small>[개발용] {card.debugReason}</small></>}
