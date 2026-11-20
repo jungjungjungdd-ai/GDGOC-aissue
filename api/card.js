@@ -8,7 +8,7 @@ function readBody(body) {
     try {
       return JSON.parse(body);
     } catch {
-      throw new CardRequestError("요청 본문이 올바른 JSON이 아닙니다.");
+      throw new CardRequestError("요청 본문이 올바른 JSON이 아닙니다.", 400, "INVALID_JSON");
     }
   }
   return body;
@@ -19,7 +19,9 @@ export default async function handler(req, res) {
 
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
-    return res.status(405).json({ error: "POST 요청만 지원합니다." });
+    return res.status(405).json({
+      error: { code: "METHOD_NOT_ALLOWED", message: "POST 요청만 지원합니다." },
+    });
   }
 
   try {
@@ -37,11 +39,18 @@ export default async function handler(req, res) {
     return res.status(200).json(card);
   } catch (error) {
     if (error instanceof CardRequestError) {
-      return res.status(error.statusCode).json({ error: error.message });
+      return res.status(error.statusCode).json({
+        error: {
+          code: error.code,
+          message: error.message,
+          ...(error.field ? { field: error.field } : {}),
+        },
+      });
     }
 
+    console.error("[card] 처리 실패:", error?.message);
     return res.status(500).json({
-      error: "행동 카드 생성 중 오류가 발생했습니다.",
+      error: { code: "INTERNAL_ERROR", message: "행동 카드 생성 중 오류가 발생했습니다." },
     });
   }
 }

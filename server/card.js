@@ -1,8 +1,7 @@
-import { randomUUID } from "node:crypto";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { GoogleGenAI, Type } from "@google/genai";
+import { GoogleGenAI } from "@google/genai";
 
 const ROOT_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DATA_DIR = path.join(ROOT_DIR, "data");
@@ -61,20 +60,20 @@ const LOCATION_OPTIONS = {
 };
 
 const ACTION_SCHEMA = {
-  type: Type.OBJECT,
+  type: "object",
   properties: {
     text: {
-      type: Type.STRING,
+      type: "string",
       description: "A short, single-step action in the requested language.",
     },
     priority: {
-      type: Type.INTEGER,
+      type: "integer",
       enum: [1, 2, 3],
       description: "1 is most urgent; 3 is lower priority.",
     },
     evidenceIds: {
-      type: Type.ARRAY,
-      items: { type: Type.STRING },
+      type: "array",
+      items: { type: "string" },
       minItems: 1,
       maxItems: 3,
       description: "IDs of supplied guideline chunks supporting this action.",
@@ -85,32 +84,28 @@ const ACTION_SCHEMA = {
 };
 
 const CARD_SCHEMA = {
-  type: Type.OBJECT,
+  type: "object",
   properties: {
     sections: {
-      type: Type.OBJECT,
+      type: "object",
       properties: {
-        now: { type: Type.ARRAY, items: ACTION_SCHEMA, maxItems: 3 },
+        now: { type: "array", items: ACTION_SCHEMA, maxItems: 3 },
         within10Minutes: {
-          type: Type.ARRAY,
+          type: "array",
           items: ACTION_SCHEMA,
           maxItems: 3,
         },
-        doNot: { type: Type.ARRAY, items: ACTION_SCHEMA, maxItems: 3 },
+        doNot: { type: "array", items: ACTION_SCHEMA, maxItems: 3 },
       },
       required: ["now", "within10Minutes", "doNot"],
       additionalProperties: false,
     },
-    shelterSearch: {
-      type: Type.OBJECT,
-      properties: {
-        available: { type: Type.BOOLEAN },
-      },
-      required: ["available"],
-      additionalProperties: false,
+    needEvacuation: {
+      type: "boolean",
+      description: "true only when the supported actions call for evacuation or moving to a shelter.",
     },
   },
-  required: ["sections", "shelterSearch"],
+  required: ["sections", "needEvacuation"],
   additionalProperties: false,
 };
 
@@ -125,7 +120,7 @@ const SYSTEM_INSTRUCTION = [
   "Translate the supported action faithfully into the requested language without changing its safety meaning.",
   "Write one short action per item. Use only evidence IDs present in the supplied chunks.",
   "If a relevant action is not supported by the chunks, omit it.",
-  "Set shelterSearch.available to true only when the supported actions call for evacuation or seeking a shelter.",
+  "Set needEvacuation to true only when the supported actions call for evacuation or moving to a shelter.",
   "Return only JSON matching the provided schema.",
 ].join("\n");
 
@@ -137,10 +132,12 @@ class InvalidCardResponse extends Error {
 }
 
 export class CardRequestError extends Error {
-  constructor(message, statusCode = 400) {
+  constructor(message, statusCode = 400, code = "INVALID_REQUEST", field) {
     super(message);
     this.name = "CardRequestError";
     this.statusCode = statusCode;
+    this.code = code;
+    this.field = field;
   }
 }
 
@@ -215,6 +212,7 @@ const PROFILE_FACT_SENTENCES = {
   "반려견 동거": "반려견과 동거함",
   "반려묘 동거": "반려묘와 동거함",
   "반려동물 동거": "반려동물과 동거함",
+  "혼자 거주": "혼자 거주함",
   "반지하 주거": "반지하에 거주함",
   "저층 주거": "저층에 거주함",
   "고층 주거": "고층에 거주함",
@@ -243,6 +241,7 @@ function normalizeProfile(profile = {}) {
       walking_aid: { label: "보행 보조기 이용", targets: ["disability"] },
       walker: { label: "보행 보조기 이용", targets: ["disability"] },
       보행_보조기: { label: "보행 보조기 이용", targets: ["disability"] },
+      limited: { label: "이동 제약", targets: ["disability"] },
       limited_mobility: { label: "이동 제약", targets: ["disability"] },
       이동_제약: { label: "이동 제약", targets: ["disability"] },
     }
@@ -280,6 +279,18 @@ function normalizeProfile(profile = {}) {
     hearing.targets.forEach((target) => targets.add(target));
   }
 
+  // 명세 형식: sensory: ["visual", "hearing"]
+  for (const item of asArray(profile.sensory)) {
+    const token = normalizeToken(item);
+    const label = token === "visual" ? "시각 제약" : token === "hearing" ? "청각 제약" : null;
+    if (label && !facts.includes(label)) {
+      facts.push(label);
+      targets.add("disability");
+    }
+  }
+
+  if (profile.livesAlone === true) facts.push("혼자 거주");
+
   const householdChoices = {
     infant: { label: "영유아 동거", targets: ["child", "family"] },
     baby: { label: "영유아 동거", targets: ["child", "family"] },
@@ -292,13 +303,14 @@ function normalizeProfile(profile = {}) {
     노약자: { label: "노인 동거", targets: ["elderly", "family"] },
   };
   const household = asArray(
-    firstDefined(profile, ["household", "cohabitants", "livingWith"])
+    firstDefined(profile, ["dependents", "household", "cohabitants", "livingWith"])
   );
   for (const member of household) {
     const choice = normalizeChoice(member, householdChoices);
     if (choice && !facts.includes(choice.label)) {
       facts.push(choice.label);
       choice.targets.forEach((target) => targets.add(target));
+      targets.add("caregiver");
     }
   }
 
@@ -506,10 +518,7 @@ function parseAndValidateResponse(text, allowedEvidenceIds) {
   if (!parsed || typeof parsed !== "object" || !parsed.sections) {
     throw new InvalidCardResponse("카드 응답의 sections가 없습니다.");
   }
-  if (
-    !parsed.shelterSearch ||
-    typeof parsed.shelterSearch.available !== "boolean"
-  ) {
+  if (typeof parsed.needEvacuation !== "boolean") {
     throw new InvalidCardResponse("대피소 표시 여부가 올바르지 않습니다.");
   }
 
@@ -574,13 +583,15 @@ async function generateValidatedCard(promptData, chunks) {
 
   try {
     firstResponse = await callGemini(promptData);
-  } catch {
+  } catch (error) {
+    console.error("[card] Gemini 호출 실패:", error?.message);
     return null;
   }
 
   try {
     return parseAndValidateResponse(firstResponse.text, evidenceIds);
   } catch (error) {
+    console.warn("[card] 1차 응답 검증 실패, 재요청:", error?.message);
     if (!(error instanceof InvalidCardResponse)) return null;
   }
 
@@ -590,13 +601,15 @@ async function generateValidatedCard(promptData, chunks) {
       promptData,
       "이전 응답이 JSON 또는 필수 근거 검증에 실패했습니다. 같은 입력과 행동요령 근거를 사용해 스키마에 맞는 JSON만 다시 출력하세요."
     );
-  } catch {
+  } catch (error) {
+    console.error("[card] Gemini 재요청 실패:", error?.message);
     return null;
   }
 
   try {
     return parseAndValidateResponse(retryResponse.text, evidenceIds);
-  } catch {
+  } catch (error) {
+    console.warn("[card] 재요청도 검증 실패, 기본 카드 반환:", error?.message);
     return null;
   }
 }
@@ -610,36 +623,49 @@ function makeSource(disasterType, sourceUrl) {
   };
 }
 
+// API 명세 5-1의 disasterType 값 (내부 파일명 heat_wave → 응답은 heatwave)
+function toSpecDisasterType(disasterType) {
+  return disasterType === "heat_wave" ? "heatwave" : disasterType;
+}
+
 function makeFallback(disasterType, alertId, fallbackData, guideline) {
   const original = fallbackData.fallbackCards[disasterType];
   if (!original) throw new Error("기본 행동요령 카드가 없습니다.");
 
-  const card = JSON.parse(JSON.stringify(original));
-  card.alertId = alertId;
-  card.createdAt = new Date().toISOString();
-  card.isFallback = true;
-  card.sources = [makeSource(disasterType, guideline.sourceUrl)];
-  return card;
+  return {
+    alertId,
+    disasterType: toSpecDisasterType(disasterType),
+    language: original.language || "ko",
+    needEvacuation: Boolean(original.needEvacuation ?? original.shelterSearch?.available),
+    sections: {
+      now: original.sections?.now ?? [],
+      within10Minutes: original.sections?.within10Minutes ?? [],
+      doNot: original.sections?.doNot ?? [],
+    },
+    sources: [makeSource(disasterType, guideline.sourceUrl)],
+    fallback: true,
+    generatedAt: new Date().toISOString(),
+  };
 }
 
 export async function createActionCard({ alertId, profile = {}, location = {} }) {
   if (typeof alertId !== "string" || !alertId.trim()) {
-    throw new CardRequestError("alertId가 필요합니다.");
+    throw new CardRequestError("alertId가 필요합니다.", 400, "INVALID_REQUEST", "alertId");
   }
   if (!profile || typeof profile !== "object" || Array.isArray(profile)) {
-    throw new CardRequestError("profile 형식이 올바르지 않습니다.");
+    throw new CardRequestError("profile 형식이 올바르지 않습니다.", 400, "INVALID_REQUEST", "profile");
   }
   if (typeof location !== "string" && (!location || typeof location !== "object" || Array.isArray(location))) {
-    throw new CardRequestError("location 형식이 올바르지 않습니다.");
+    throw new CardRequestError("location 형식이 올바르지 않습니다.", 400, "INVALID_REQUEST", "location");
   }
 
   const alerts = readJson("alerts.json");
   const alert = alerts.find((item) => item.id === alertId);
-  if (!alert) throw new CardRequestError("재난문자를 찾을 수 없습니다.", 404);
+  if (!alert) throw new CardRequestError("재난문자를 찾을 수 없습니다.", 404, "ALERT_NOT_FOUND", "alertId");
 
   const disasterType = normalizeDisasterType(alert.disasterType);
   if (!disasterType) {
-    throw new CardRequestError("지원하지 않는 재난 유형입니다.");
+    throw new CardRequestError("지원하지 않는 재난 유형입니다.", 400, "UNSUPPORTED_DISASTER");
   }
 
   const guideline = parseGuideline(DISASTERS[disasterType].file);
@@ -669,14 +695,14 @@ export async function createActionCard({ alertId, profile = {}, location = {} })
   }
 
   return {
-    id: "card_" + randomUUID(),
     alertId,
+    disasterType: toSpecDisasterType(disasterType),
     language: normalizedProfile.language,
+    needEvacuation: generated.needEvacuation,
     sections,
-    shelterSearch: generated.shelterSearch,
     sources: [makeSource(disasterType, guideline.sourceUrl)],
-    createdAt: new Date().toISOString(),
-    isFallback: false,
+    fallback: false,
+    generatedAt: new Date().toISOString(),
   };
 }
 
