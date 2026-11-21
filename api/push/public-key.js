@@ -6,7 +6,8 @@ export default function handler(req, res) {
     });
   }
 
-  const publicKey = process.env.VAPID_PUBLIC_KEY;
+  // 환경변수에 붙여 넣다 들어간 공백·줄바꿈 제거
+  const publicKey = process.env.VAPID_PUBLIC_KEY?.trim();
 
   if (!publicKey) {
     return res.status(500).json({

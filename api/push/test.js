@@ -55,8 +55,9 @@ export default async function handler(req, res) {
   }
 
   // 4. VAPID 키 확인 (비밀 키는 응답·로그에 절대 넣지 않기!)
-  const publicKey = process.env.VAPID_PUBLIC_KEY;
-  const privateKey = process.env.VAPID_PRIVATE_KEY;
+  // 환경변수에 붙여 넣다 들어간 공백·줄바꿈 제거
+  const publicKey = process.env.VAPID_PUBLIC_KEY?.trim();
+  const privateKey = process.env.VAPID_PRIVATE_KEY?.trim();
 
   if (!publicKey || !privateKey) {
     return sendError(res, 500, 'SERVER_ERROR', '푸시 키가 설정되지 않았습니다.');
