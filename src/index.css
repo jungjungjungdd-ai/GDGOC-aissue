@@ -186,3 +186,6 @@ a.btn-primary { display: block; text-align: center; text-decoration: none; }
 /* 접근성(장애인편의시설) 표시 */
 .badge.ramp { background: #e3f2fd; color: #0d47a1; font-weight: 700; }
 .access-info { margin: 0 0 6px; }
+
+/* 홈: 방금 받은 재난문자 표시 */
+.received-at { display: block; font-size: 13px; font-weight: 700; color: #b71c1c; margin-bottom: 4px; }
