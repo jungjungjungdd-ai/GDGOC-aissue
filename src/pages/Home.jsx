@@ -1,7 +1,17 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getAlerts } from '../lib/api.js';
-import { getProfile } from '../lib/storage.js';
+import { getLastReceivedAlert, getProfile } from '../lib/storage.js';
+import mockAlerts from '../../data/alerts.json';
+
+// "3분 전" 같은 표시
+function timeAgo(iso) {
+  const min = Math.floor((Date.now() - new Date(iso).getTime()) / 60000);
+  if (min < 1) return '방금';
+  if (min < 60) return `${min}분 전`;
+  const h = Math.floor(min / 60);
+  return h < 24 ? `${h}시간 전` : `${Math.floor(h / 24)}일 전`;
+}
 
 const LANG = { ko: '한국어', en: 'English', vi: 'Tiếng Việt', zh: '中文' };
 const HOUSING = { semi_basement: '반지하', low_floor: '저층', high_floor: '고층' };
@@ -10,6 +20,7 @@ export default function Home() {
   const [alerts, setAlerts] = useState([]);
   const [loading, setLoading] = useState(true);
   const profile = getProfile();
+  const lastReceived = getLastReceivedAlert();
 
   useEffect(() => {
     getAlerts()
@@ -18,7 +29,11 @@ export default function Home() {
       .finally(() => setLoading(false));
   }, []);
 
-  const latest = alerts[0];
+  // 테스트 발송으로 받은 문자가 있으면 그걸 최신으로, 없으면 목록의 첫 번째
+  const received = lastReceived
+    ? [...alerts, ...mockAlerts].find((a) => a.id === lastReceived.alertId)
+    : null;
+  const latest = received ?? alerts[0];
 
   return (
     <div>
@@ -31,6 +46,9 @@ export default function Home() {
         {loading && <p className="muted">불러오는 중…</p>}
         {!loading && latest && (
           <Link to={`/alerts/${latest.id}/location`} className="alert">
+            {received && (
+              <span className="received-at">📩 {timeAgo(lastReceived.receivedAt)} 받은 문자</span>
+            )}
             <strong>{latest.title}</strong>
             <p>{latest.message}</p>
           </Link>

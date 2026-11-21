@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { getAlerts } from '../lib/api.js';
 import { getPermission, isPushSupported, sendTestAlert } from '../lib/push.js';
 import mockAlerts from '../../data/alerts.json';
+import { saveLastReceivedAlert } from '../lib/storage.js';
 
 // 오류를 사용자에게 보여줄 문장으로 바꾸기
 function toMessage(err) {
@@ -37,6 +38,7 @@ export default function TestPushPanel() {
     setStatus(null);
     try {
       await sendTestAlert(alertId);
+      saveLastReceivedAlert(alertId); // 홈의 '최근 재난문자'에 이 문자가 뜨게
       setStatus({ ok: true, text: '알림을 보냈어요! 잠시 후 알림이 와요.' });
     } catch (err) {
       setStatus({ ok: false, text: toMessage(err) });
