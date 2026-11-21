@@ -16,6 +16,12 @@ self.addEventListener('push', (event) => {
       self.registration.showNotification(data.title || '재난 알림', {
         body: data.body,
         icon: '/pwa-192x192.png',
+        badge: '/pwa-192x192.png',
+        // 재난 알림답게: 진동, 사용자가 닫을 때까지 유지, 같은 재난은 새로 울리며 교체
+        vibrate: [300, 100, 300, 100, 300],
+        requireInteraction: true,
+        tag: data.alertId || 'disaster-alert',
+        renotify: true,
         data: { url: data.url || '/' },
       }),
       // 앱이 열려 있으면 '최근 받은 재난문자'로 기록하라고 알림
