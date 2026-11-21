@@ -12,11 +12,18 @@ self.addEventListener('fetch', (event) => {
 self.addEventListener('push', (event) => {
   const data = event.data ? event.data.json() : {};
   event.waitUntil(
-    self.registration.showNotification(data.title || '재난 알림', {
-      body: data.body,
-      icon: '/pwa-192x192.png',
-      data: { url: data.url || '/' },
-    })
+    Promise.all([
+      self.registration.showNotification(data.title || '재난 알림', {
+        body: data.body,
+        icon: '/pwa-192x192.png',
+        data: { url: data.url || '/' },
+      }),
+      // 앱이 열려 있으면 '최근 받은 재난문자'로 기록하라고 알림
+      data.alertId &&
+        self.clients
+          .matchAll({ type: 'window', includeUncontrolled: true })
+          .then((list) => list.forEach((c) => c.postMessage({ type: 'alert-received', alertId: data.alertId }))),
+    ])
   );
 });
 

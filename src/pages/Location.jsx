@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import { saveLastReceivedAlert } from '../lib/storage.js';
 import { loadAlert } from '../lib/alerts.js';
 import { checkImpact } from '../lib/region.js';
 import PrivacyNote from '../components/PrivacyNote.jsx';
@@ -23,6 +24,13 @@ const GPS_MESSAGE = {
 
 export default function Location() {
   const { id } = useParams();
+  const [searchParams] = useSearchParams();
+  const fromPush = searchParams.get('received') === '1';
+
+  // 알림을 눌러 들어온 경우: 이 폰의 '최근 받은 재난문자'로 기록
+  useEffect(() => {
+    if (fromPush) saveLastReceivedAlert(id);
+  }, [fromPush, id]);
   const navigate = useNavigate();
   const [alert, setAlert] = useState(null);
   const [alertLoading, setAlertLoading] = useState(true);

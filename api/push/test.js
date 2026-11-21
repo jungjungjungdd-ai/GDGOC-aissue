@@ -74,7 +74,9 @@ export default async function handler(req, res) {
   const payload = JSON.stringify({
     title: alert.title,
     body: alert.message,
-    url: `/alerts/${alert.id}/location`,
+    alertId: alert.id,
+    // 알림을 눌러 들어오면 이 폰의 '최근 받은 재난문자'로 기록
+    url: `/alerts/${alert.id}/location?received=1`,
   });
 
   // 6. 발송

@@ -189,3 +189,8 @@ a.btn-primary { display: block; text-align: center; text-decoration: none; }
 
 /* 홈: 방금 받은 재난문자 표시 */
 .received-at { display: block; font-size: 13px; font-weight: 700; color: #b71c1c; margin-bottom: 4px; }
+
+/* PC 원격 발송 화면 */
+.remote-list { display: flex; flex-direction: column; gap: 8px; margin: 16px 0; }
+.remote-list .option { text-align: left; display: flex; flex-direction: column; gap: 2px; }
+.remote-list .option.selected { border-color: #d32f2f; background: #fdecea; }
