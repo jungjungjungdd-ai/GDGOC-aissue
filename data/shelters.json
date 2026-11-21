@@ -28,7 +28,10 @@
   "longitude": 126.787282,
   "facilityType": "공공용시설",
   "areaM2": 3933,
-  "rampAvailable": null
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": false
+  }
  },
  {
   "id": "shl_siheung_4010000-S201100019",
@@ -38,7 +41,19 @@
   "longitude": 126.794406,
   "facilityType": "공공용시설",
   "areaM2": 1256,
-  "rampAvailable": null
+  "rampAvailable": true,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "은행동 삼성홈타운아파트 지하주차장",
+   "facilityId": "4139010600-3-02890011",
+   "features": [
+    "승강기",
+    "주출입구 높이차이 제거",
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S201300001",
@@ -48,7 +63,21 @@
   "longitude": 126.787353,
   "facilityType": "공공용시설",
   "areaM2": 24435,
-  "rampAvailable": null
+  "rampAvailable": true,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "신천동 푸르지오5차아파트 지하주차장",
+   "facilityId": "4139010200-3-07090032",
+   "features": [
+    "승강기",
+    "주출입구(문)",
+    "장애인사용가능화장실",
+    "장애인전용주차구역",
+    "주출입구 높이차이 제거",
+    "주출입구 접근로"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S199900002",
@@ -58,7 +87,18 @@
   "longitude": 126.780017,
   "facilityType": "공공용시설",
   "areaM2": 3011,
-  "rampAvailable": null
+  "rampAvailable": true,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "장곡동 삼성아파트 지하주차장",
+   "facilityId": "4139013000-3-08050000",
+   "features": [
+    "주출입구 높이차이 제거",
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S199700010",
@@ -81,7 +121,10 @@
   "longitude": 126.788461,
   "facilityType": "공공용시설",
   "areaM2": 4045,
-  "rampAvailable": null
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": false
+  }
  },
  {
   "id": "shl_siheung_4010000-S201100010",
@@ -91,7 +134,19 @@
   "longitude": 126.795662,
   "facilityType": "공공용시설",
   "areaM2": 4302,
-  "rampAvailable": null
+  "rampAvailable": true,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "타원에스라이프아파트 지하주차장",
+   "facilityId": "4139010600-3-01050013",
+   "features": [
+    "승강기",
+    "주출입구 높이차이 제거",
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S201000006",
@@ -101,7 +156,19 @@
   "longitude": 126.80112,
   "facilityType": "공공용시설",
   "areaM2": 6445,
-  "rampAvailable": null
+  "rampAvailable": true,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "연성동 장현엔플러스빌 아파트 지하주차장",
+   "facilityId": "4139012900-3-05420000",
+   "features": [
+    "승강기",
+    "주출입구 높이차이 제거",
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S201100038",
@@ -111,7 +178,19 @@
   "longitude": 126.743919,
   "facilityType": "공공용시설",
   "areaM2": 24854,
-  "rampAvailable": null
+  "rampAvailable": true,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "월곶동 월곶4차 풍림아이원아파트 지하주차장",
+   "facilityId": "4139013100-3-09940000",
+   "features": [
+    "승강기",
+    "주출입구(문)",
+    "주출입구 높이차이 제거",
+    "주출입구 접근로"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S201000004",
@@ -278,7 +357,10 @@
   "longitude": 126.680688,
   "facilityType": "공공용시설",
   "areaM2": 4682.05,
-  "rampAvailable": null
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": false
+  }
  },
  {
   "id": "shl_siheung_4010000-S199900001",
@@ -338,7 +420,10 @@
   "longitude": 126.729742,
   "facilityType": "공공용시설",
   "areaM2": 5421,
-  "rampAvailable": null
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": false
+  }
  },
  {
   "id": "shl_siheung_4010000-S200400040",
@@ -398,7 +483,10 @@
   "longitude": 126.734445,
   "facilityType": "공공용시설",
   "areaM2": 3564,
-  "rampAvailable": null
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": false
+  }
  },
  {
   "id": "shl_siheung_4010000-S199600009",
@@ -408,7 +496,10 @@
   "longitude": 126.735922,
   "facilityType": "공공용시설",
   "areaM2": 4800,
-  "rampAvailable": null
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": false
+  }
  },
  {
   "id": "shl_siheung_4010000-S199700012",
@@ -438,7 +529,17 @@
   "longitude": 126.727414,
   "facilityType": "공공용시설",
   "areaM2": 3980,
-  "rampAvailable": null
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "정왕4동 서해2차아파트 지하주차장",
+   "facilityId": "4139013200-3-18860004",
+   "features": [
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S199900005",
@@ -448,7 +549,10 @@
   "longitude": 126.735843,
   "facilityType": "공공용시설",
   "areaM2": 1064,
-  "rampAvailable": null
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": false
+  }
  },
  {
   "id": "shl_siheung_4010000-S190000009",
@@ -598,7 +702,18 @@
   "longitude": 126.730807,
   "facilityType": "공공용시설",
   "areaM2": 2688,
-  "rampAvailable": null
+  "rampAvailable": true,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "정왕2동 신우아파트 지하주차장",
+   "facilityId": "4139013200-3-18700001",
+   "features": [
+    "주출입구 높이차이 제거",
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S199600006",
@@ -608,7 +723,10 @@
   "longitude": 126.725262,
   "facilityType": "공공용시설",
   "areaM2": 7850,
-  "rampAvailable": null
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": false
+  }
  },
  {
   "id": "shl_siheung_4010000-S201000035",
@@ -688,7 +806,10 @@
   "longitude": 126.718729,
   "facilityType": "공공용시설",
   "areaM2": 5736,
-  "rampAvailable": null
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": false
+  }
  },
  {
   "id": "shl_siheung_4010000-S200600001",
@@ -718,7 +839,10 @@
   "longitude": 126.733232,
   "facilityType": "공공용시설",
   "areaM2": 4221,
-  "rampAvailable": null
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": false
+  }
  },
  {
   "id": "shl_siheung_4010000-S200000002",
@@ -768,7 +892,18 @@
   "longitude": 126.725983,
   "facilityType": "공공용시설",
   "areaM2": 4434,
-  "rampAvailable": null
+  "rampAvailable": true,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "정왕2동 요진아파트 지하주차장",
+   "facilityId": "4139013200-3-18500000",
+   "features": [
+    "주출입구 높이차이 제거",
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S201100009",
@@ -868,7 +1003,10 @@
   "longitude": 126.721151,
   "facilityType": "공공용시설",
   "areaM2": 5321,
-  "rampAvailable": null
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": false
+  }
  },
  {
   "id": "shl_siheung_4010000-S202000004",
@@ -888,7 +1026,18 @@
   "longitude": 126.731997,
   "facilityType": "공공용시설",
   "areaM2": 8367,
-  "rampAvailable": null
+  "rampAvailable": true,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "정왕2동 주공5단지아파트 지하주차장",
+   "facilityId": "4139013200-3-18440000",
+   "features": [
+    "주출입구 높이차이 제거",
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S190000011",
@@ -918,7 +1067,10 @@
   "longitude": 126.690843,
   "facilityType": "공공용시설",
   "areaM2": 32014,
-  "rampAvailable": null
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": false
+  }
  },
  {
   "id": "shl_siheung_4010000-S201100043",
@@ -958,7 +1110,10 @@
   "longitude": 126.734325,
   "facilityType": "공공용시설",
   "areaM2": 4430,
-  "rampAvailable": null
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": false
+  }
  },
  {
   "id": "shl_siheung_4010000-S201000020",
@@ -968,7 +1123,18 @@
   "longitude": 126.741463,
   "facilityType": "공공용시설",
   "areaM2": 8816,
-  "rampAvailable": null
+  "rampAvailable": true,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "정왕1동 건영5차아파트 지하주차장",
+   "facilityId": "4139013200-3-17880001",
+   "features": [
+    "주출입구 높이차이 제거",
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S200400044",
@@ -1028,7 +1194,10 @@
   "longitude": 126.728006,
   "facilityType": "공공용시설",
   "areaM2": 5190,
-  "rampAvailable": null
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": false
+  }
  },
  {
   "id": "shl_siheung_4010000-S201000040",
@@ -1048,7 +1217,17 @@
   "longitude": 126.734508,
   "facilityType": "공공용시설",
   "areaM2": 4612,
-  "rampAvailable": null
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "정왕2동 삼성아파트 지하주차장",
+   "facilityId": "4139013200-3-18720005",
+   "features": [
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S201000010",
@@ -1058,7 +1237,10 @@
   "longitude": 126.730665,
   "facilityType": "공공용시설",
   "areaM2": 5328,
-  "rampAvailable": null
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": false
+  }
  },
  {
   "id": "shl_siheung_4010000-S200400015",
@@ -1068,7 +1250,19 @@
   "longitude": 126.74292,
   "facilityType": "공공용시설",
   "areaM2": 1172,
-  "rampAvailable": null
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "정왕본동 정왕프라자 지하주차장",
+   "facilityId": "4139013200-3-23260001",
+   "features": [
+    "승강기",
+    "장애인사용가능화장실",
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S190000010",
@@ -1088,7 +1282,18 @@
   "longitude": 126.723755,
   "facilityType": "공공용시설",
   "areaM2": 2707,
-  "rampAvailable": null
+  "rampAvailable": true,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "정왕3동 건영7차아파트 지하주차장",
+   "facilityId": "4139013200-3-18670001",
+   "features": [
+    "주출입구 높이차이 제거",
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S201100031",
@@ -1138,7 +1343,18 @@
   "longitude": 126.744256,
   "facilityType": "공공용시설",
   "areaM2": 2432,
-  "rampAvailable": null
+  "rampAvailable": true,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "정왕1동 대우아파트 지하주차장",
+   "facilityId": "4139013200-3-17880003",
+   "features": [
+    "주출입구 높이차이 제거",
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S201000009",
@@ -1148,7 +1364,16 @@
   "longitude": 126.735612,
   "facilityType": "공공용시설",
   "areaM2": 2409,
-  "rampAvailable": null
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "정왕2동 영남4차아파트 지하주차장",
+   "facilityId": "4139013200-3-13940002",
+   "features": [
+    "주출입구 접근로"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S201000011",
@@ -1158,7 +1383,18 @@
   "longitude": 126.729658,
   "facilityType": "공공용시설",
   "areaM2": 6848,
-  "rampAvailable": null
+  "rampAvailable": true,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "정왕2동 건영3차아파트 지하주차장",
+   "facilityId": "4139013200-3-18710001",
+   "features": [
+    "주출입구 높이차이 제거",
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S201600004",
@@ -1168,7 +1404,18 @@
   "longitude": 126.730012,
   "facilityType": "공공용시설",
   "areaM2": 1500,
-  "rampAvailable": null
+  "rampAvailable": true,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "정왕4동 삼환아파트 202동 지하실",
+   "facilityId": "4139013200-3-18760001",
+   "features": [
+    "주출입구 높이차이 제거",
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S199300001",
@@ -1188,7 +1435,18 @@
   "longitude": 126.719958,
   "facilityType": "공공용시설",
   "areaM2": 6195,
-  "rampAvailable": null
+  "rampAvailable": true,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "정왕3동 계룡2차아파트 지하주차장",
+   "facilityId": "4139013200-3-19420001",
+   "features": [
+    "주출입구 높이차이 제거",
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S201100004",
@@ -1198,7 +1456,19 @@
   "longitude": 126.700533,
   "facilityType": "공공용시설",
   "areaM2": 2569,
-  "rampAvailable": null
+  "rampAvailable": true,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "정왕3동 스틸랜드 지하주차장",
+   "facilityId": "4139013200-3-22100000",
+   "features": [
+    "장애인전용주차구역",
+    "주출입구 높이차이 제거",
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S199500001",
@@ -1208,7 +1478,18 @@
   "longitude": 126.730435,
   "facilityType": "공공용시설",
   "areaM2": 3014,
-  "rampAvailable": null
+  "rampAvailable": true,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "정왕2동 월드아파트 지하주차장",
+   "facilityId": "4139013200-3-18730003",
+   "features": [
+    "주출입구 높이차이 제거",
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S190000004",
@@ -1228,7 +1509,21 @@
   "longitude": 126.743545,
   "facilityType": "공공용시설",
   "areaM2": 649,
-  "rampAvailable": null
+  "rampAvailable": true,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "정왕본동 정왕오피스텔 지하주차장",
+   "facilityId": "4139013200-3-23260002",
+   "features": [
+    "승강기",
+    "장애인사용가능화장실",
+    "장애인전용주차구역",
+    "주출입구 높이차이 제거",
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S202200005",
@@ -1308,7 +1603,17 @@
   "longitude": 126.740702,
   "facilityType": "공공용시설",
   "areaM2": 4392,
-  "rampAvailable": null
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "정왕본동 역전프라자 지하주차장",
+   "facilityId": "4139013200-3-23020000",
+   "features": [
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S201100005",
@@ -1358,7 +1663,10 @@
   "longitude": 126.735886,
   "facilityType": "공공용시설",
   "areaM2": 6211,
-  "rampAvailable": null
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": false
+  }
  },
  {
   "id": "shl_siheung_4010000-S201100007",
@@ -1428,7 +1736,18 @@
   "longitude": 126.716036,
   "facilityType": "공공용시설",
   "areaM2": 21495,
-  "rampAvailable": null
+  "rampAvailable": true,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "정왕3동 메가폴리스 지하주차장",
+   "facilityId": "4139013200-3-21640002",
+   "features": [
+    "주출입구 높이차이 제거",
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S201100037",
