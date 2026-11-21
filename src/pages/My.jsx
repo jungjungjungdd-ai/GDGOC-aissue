@@ -4,6 +4,7 @@ import PrivacyNote from '../components/PrivacyNote.jsx';
 import ProfileForm from '../components/ProfileForm.jsx';
 import { getProfile, saveProfile } from '../lib/storage.js';
 import TestPushPanel from '../components/TestPushPanel.jsx';
+import RemoteLinkPanel from '../components/RemoteLinkPanel.jsx';
 import { buildOfflineBundle } from '../lib/offline.js';
 
 // 마이 화면: 프로필 확인·수정
@@ -30,6 +31,7 @@ export default function My() {
       <Link to="/offline" className="btn-outline">📦 저장된 오프라인 카드 보기</Link>
       <PrivacyNote variant="profile" />
             <TestPushPanel />
+      <RemoteLinkPanel />
       <Link to="/demo" className="link demo-link">🎬 데모 모드 (프로필별 카드 비교)</Link>
     </div>
   );

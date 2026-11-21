@@ -50,8 +50,8 @@ export async function enablePush() {
   return json;
 }
 
-// 기존 구독을 지우고 새로 만들기 (구독이 만료됐을 때)
-async function resubscribe() {
+// 기존 구독을 지우고 새로 만들기 (구독이 만료됐을 때, 원격 링크를 끊을 때)
+export async function resubscribe() {
   const registration = await waitServiceWorker();
   const old = await registration.pushManager.getSubscription();
   if (old) await old.unsubscribe();
@@ -70,5 +70,35 @@ export async function sendTestAlert(alertId) {
       return sendTestPush(alertId, subscription);
     }
     throw err;
+  }
+}
+
+// ── PC에서 이 폰으로 보내기 (시연용 원격 발송 링크) ──
+// 구독 정보를 링크의 # 뒤에 담는다. # 뒤는 서버로 전송되지 않아서 서버·로그에 남지 않음.
+function toBase64Url(text) {
+  const bytes = new TextEncoder().encode(text);
+  let bin = '';
+  bytes.forEach((b) => (bin += String.fromCharCode(b)));
+  return btoa(bin).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+function fromBase64Url(text) {
+  const bin = atob(text.replace(/-/g, '+').replace(/_/g, '/'));
+  return new TextDecoder().decode(Uint8Array.from(bin, (c) => c.charCodeAt(0)));
+}
+
+export async function createRemoteLink() {
+  const subscription = getPushSubscription() ?? (await enablePush());
+  const { endpoint, keys } = subscription;
+  return `${location.origin}/remote#s=${toBase64Url(JSON.stringify({ endpoint, keys }))}`;
+}
+
+// /remote#s=... 에서 구독 정보 꺼내기 (형식이 이상하면 null)
+export function readRemoteSubscription(hash) {
+  try {
+    const raw = new URLSearchParams(hash.replace(/^#/, '')).get('s');
+    const sub = raw && JSON.parse(fromBase64Url(raw));
+    return sub?.endpoint && sub?.keys?.p256dh && sub?.keys?.auth ? sub : null;
+  } catch {
+    return null;
   }
 }

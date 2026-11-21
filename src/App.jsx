@@ -9,6 +9,7 @@ import Card from './pages/Card.jsx';
 import Shelters from './pages/Shelters.jsx';
 import My from './pages/My.jsx';
 import Demo from './pages/Demo.jsx';
+import Remote from './pages/Remote.jsx';
 import Offline from './pages/Offline.jsx';
 import RequireProfile from './components/RequireProfile.jsx';
 
@@ -32,6 +33,8 @@ export default function App() {
 
       {/* 시연 영상용 비교 화면 */}
       <Route path="/demo" element={<Demo />} />
+      {/* 시연용: PC에서 폰으로 알림 보내기 */}
+      <Route path="/remote" element={<Remote />} />
 
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
