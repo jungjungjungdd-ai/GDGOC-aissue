@@ -6,8 +6,19 @@
   "latitude": 37.341136,
   "longitude": 126.741137,
   "facilityType": "공공용시설",
-  "areaM2": 8998.0,
-  "rampAvailable": null
+  "areaM2": 8998,
+  "rampAvailable": true,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "정왕1동 주공6차아파트 지하주차장",
+   "facilityId": "4139013200-3-17870001",
+   "features": [
+    "주출입구 높이차이 제거",
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S199900004",
@@ -16,7 +27,7 @@
   "latitude": 37.381424,
   "longitude": 126.787282,
   "facilityType": "공공용시설",
-  "areaM2": 3933.0,
+  "areaM2": 3933,
   "rampAvailable": null
  },
  {
@@ -26,7 +37,7 @@
   "latitude": 37.431175,
   "longitude": 126.794406,
   "facilityType": "공공용시설",
-  "areaM2": 1256.0,
+  "areaM2": 1256,
   "rampAvailable": null
  },
  {
@@ -36,7 +47,7 @@
   "latitude": 37.441609,
   "longitude": 126.787353,
   "facilityType": "공공용시설",
-  "areaM2": 24435.0,
+  "areaM2": 24435,
   "rampAvailable": null
  },
  {
@@ -46,7 +57,7 @@
   "latitude": 37.377987,
   "longitude": 126.780017,
   "facilityType": "공공용시설",
-  "areaM2": 3011.0,
+  "areaM2": 3011,
   "rampAvailable": null
  },
  {
@@ -56,8 +67,11 @@
   "latitude": 37.355468,
   "longitude": 126.726521,
   "facilityType": "공공용시설",
-  "areaM2": 6017.0,
-  "rampAvailable": null
+  "areaM2": 6017,
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": false
+  }
  },
  {
   "id": "shl_siheung_4010000-S200400042",
@@ -66,7 +80,7 @@
   "latitude": 37.432376,
   "longitude": 126.788461,
   "facilityType": "공공용시설",
-  "areaM2": 4045.0,
+  "areaM2": 4045,
   "rampAvailable": null
  },
  {
@@ -76,7 +90,7 @@
   "latitude": 37.438144,
   "longitude": 126.795662,
   "facilityType": "공공용시설",
-  "areaM2": 4302.0,
+  "areaM2": 4302,
   "rampAvailable": null
  },
  {
@@ -86,7 +100,7 @@
   "latitude": 37.380031,
   "longitude": 126.80112,
   "facilityType": "공공용시설",
-  "areaM2": 6445.0,
+  "areaM2": 6445,
   "rampAvailable": null
  },
  {
@@ -96,7 +110,7 @@
   "latitude": 37.3878,
   "longitude": 126.743919,
   "facilityType": "공공용시설",
-  "areaM2": 24854.0,
+  "areaM2": 24854,
   "rampAvailable": null
  },
  {
@@ -106,7 +120,7 @@
   "latitude": 37.391238,
   "longitude": 126.804507,
   "facilityType": "공공용시설",
-  "areaM2": 4218.0,
+  "areaM2": 4218,
   "rampAvailable": null
  },
  {
@@ -116,8 +130,11 @@
   "latitude": 37.339238,
   "longitude": 126.74476,
   "facilityType": "공공용시설",
-  "areaM2": 8273.0,
-  "rampAvailable": null
+  "areaM2": 8273,
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": false
+  }
  },
  {
   "id": "shl_siheung_4010000-S200300002",
@@ -126,7 +143,7 @@
   "latitude": 37.449096,
   "longitude": 126.786457,
   "facilityType": "공공용시설",
-  "areaM2": 6138.0,
+  "areaM2": 6138,
   "rampAvailable": null
  },
  {
@@ -136,8 +153,19 @@
   "latitude": 37.361357,
   "longitude": 126.734378,
   "facilityType": "공공용시설",
-  "areaM2": 3169.0,
-  "rampAvailable": null
+  "areaM2": 3169,
+  "rampAvailable": true,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "정왕4동 보성아파트 지하주차장",
+   "facilityId": "4139013200-3-18770005",
+   "features": [
+    "주출입구 높이차이 제거",
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S200000001",
@@ -146,7 +174,7 @@
   "latitude": 37.407403,
   "longitude": 126.783845,
   "facilityType": "공공용시설",
-  "areaM2": 8992.0,
+  "areaM2": 8992,
   "rampAvailable": null
  },
  {
@@ -156,7 +184,7 @@
   "latitude": 37.446436,
   "longitude": 126.797374,
   "facilityType": "공공용시설",
-  "areaM2": 1694.0,
+  "areaM2": 1694,
   "rampAvailable": null
  },
  {
@@ -166,8 +194,11 @@
   "latitude": 37.338989,
   "longitude": 126.744706,
   "facilityType": "공공용시설",
-  "areaM2": 6694.0,
-  "rampAvailable": null
+  "areaM2": 6694,
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": false
+  }
  },
  {
   "id": "shl_siheung_4010000-S199800001",
@@ -176,7 +207,7 @@
   "latitude": 37.443553,
   "longitude": 126.795775,
   "facilityType": "공공용시설",
-  "areaM2": 13170.0,
+  "areaM2": 13170,
   "rampAvailable": null
  },
  {
@@ -186,7 +217,7 @@
   "latitude": 37.371789,
   "longitude": 126.810925,
   "facilityType": "공공용시설",
-  "areaM2": 10107.0,
+  "areaM2": 10107,
   "rampAvailable": null
  },
  {
@@ -196,7 +227,7 @@
   "latitude": 37.36273,
   "longitude": 126.713183,
   "facilityType": "공공용시설",
-  "areaM2": 110687.0,
+  "areaM2": 110687,
   "rampAvailable": null
  },
  {
@@ -207,7 +238,17 @@
   "longitude": 126.734582,
   "facilityType": "공공용시설",
   "areaM2": 5643.74,
-  "rampAvailable": null
+  "rampAvailable": null,
+  "accessibility": {
+   "matched": true,
+   "source": "한국사회보장정보원 장애인편의시설 현황",
+   "facilityName": "정왕2동 화성아파트 지하주차장",
+   "facilityId": "4139013200-3-18740002",
+   "features": [
+    "주출입구 접근로",
+    "주출입구(문)"
+   ]
+  }
  },
  {
   "id": "shl_siheung_4010000-S200800001",
@@ -216,7 +257,7 @@
   "latitude": 37.447548,
   "longitude": 126.785008,
   "facilityType": "공공용시설",
-  "areaM2": 1960.0,
+  "areaM2": 1960,
   "rampAvailable": null
  },
  {
@@ -226,7 +267,7 @@
   "latitude": 37.345585,
   "longitude": 126.782721,
   "facilityType": "공공용시설",
-  "areaM2": 858.0,
+  "areaM2": 858,
   "rampAvailable": null
  },
  {
@@ -246,7 +287,7 @@
   "latitude": 37.394039,
   "longitude": 126.812818,
   "facilityType": "공공용시설",
-  "areaM2": 11511.0,
+  "areaM2": 11511,
   "rampAvailable": null
  },
  {
@@ -256,7 +297,7 @@
   "latitude": 37.374415,
   "longitude": 126.724899,
   "facilityType": "공공용시설",
-  "areaM2": 50396.0,
+  "areaM2": 50396,
   "rampAvailable": null
  },
  {
@@ -276,7 +317,7 @@
   "latitude": 37.393296,
   "longitude": 126.803738,
   "facilityType": "공공용시설",
-  "areaM2": 1598.0,
+  "areaM2": 1598,
   "rampAvailable": null
  },
  {
@@ -286,7 +327,7 @@
   "latitude": 37.409008,
   "longitude": 126.818329,
   "facilityType": "공공용시설",
-  "areaM2": 18286.0,
+  "areaM2": 18286,
   "rampAvailable": null
  },
  {
@@ -296,7 +337,7 @@
   "latitude": 37.356906,
   "longitude": 126.729742,
   "facilityType": "공공용시설",
-  "areaM2": 5421.0,
+  "areaM2": 5421,
   "rampAvailable": null
  },
  {
@@ -306,7 +347,7 @@
   "latitude": 37.389963,
   "longitude": 126.812428,
   "facilityType": "공공용시설",
-  "areaM2": 4877.0,
+  "areaM2": 4877,
   "rampAvailable": null
  },
  {
@@ -316,7 +357,7 @@
   "latitude": 37.443441,
   "longitude": 126.80072,
   "facilityType": "공공용시설",
-  "areaM2": 8754.0,
+  "areaM2": 8754,
   "rampAvailable": null
  },
  {
@@ -326,7 +367,7 @@
   "latitude": 37.420163,
   "longitude": 126.795252,
   "facilityType": "공공용시설",
-  "areaM2": 17074.0,
+  "areaM2": 17074,
   "rampAvailable": null
  },
  {
@@ -336,7 +377,7 @@
   "latitude": 37.363669,
   "longitude": 126.812861,
   "facilityType": "공공용시설",
-  "areaM2": 6527.0,
+  "areaM2": 6527,
   "rampAvailable": null
  },
  {
@@ -346,7 +387,7 @@
   "latitude": 37.372026,
   "longitude": 126.810365,
   "facilityType": "공공용시설",
-  "areaM2": 3777.0,
+  "areaM2": 3777,
   "rampAvailable": null
  },
  {
@@ -356,7 +397,7 @@
   "latitude": 37.364853,
   "longitude": 126.734445,
   "facilityType": "공공용시설",
-  "areaM2": 3564.0,
+  "areaM2": 3564,
   "rampAvailable": null
  },
  {
@@ -366,7 +407,7 @@
   "latitude": 37.364333,
   "longitude": 126.735922,
   "facilityType": "공공용시설",
-  "areaM2": 4800.0,
+  "areaM2": 4800,
   "rampAvailable": null
  },
  {
@@ -376,7 +417,7 @@
   "latitude": 37.383316,
   "longitude": 126.859171,
   "facilityType": "공공용시설",
-  "areaM2": 6528.0,
+  "areaM2": 6528,
   "rampAvailable": null
  },
  {
@@ -386,7 +427,7 @@
   "latitude": 37.365047,
   "longitude": 126.810338,
   "facilityType": "공공용시설",
-  "areaM2": 22260.0,
+  "areaM2": 22260,
   "rampAvailable": null
  },
  {
@@ -396,7 +437,7 @@
   "latitude": 37.359773,
   "longitude": 126.727414,
   "facilityType": "공공용시설",
-  "areaM2": 3980.0,
+  "areaM2": 3980,
   "rampAvailable": null
  },
  {
@@ -406,7 +447,7 @@
   "latitude": 37.364823,
   "longitude": 126.735843,
   "facilityType": "공공용시설",
-  "areaM2": 1064.0,
+  "areaM2": 1064,
   "rampAvailable": null
  },
  {
@@ -416,7 +457,7 @@
   "latitude": 37.450546,
   "longitude": 126.793982,
   "facilityType": "공공용시설",
-  "areaM2": 1280.0,
+  "areaM2": 1280,
   "rampAvailable": null
  },
  {
@@ -426,7 +467,7 @@
   "latitude": 37.436372,
   "longitude": 126.77877,
   "facilityType": "공공용시설",
-  "areaM2": 2688.0,
+  "areaM2": 2688,
   "rampAvailable": null
  },
  {
@@ -436,7 +477,7 @@
   "latitude": 37.37923,
   "longitude": 126.859478,
   "facilityType": "공공용시설",
-  "areaM2": 15555.0,
+  "areaM2": 15555,
   "rampAvailable": null
  },
  {
@@ -446,7 +487,7 @@
   "latitude": 37.433477,
   "longitude": 126.798083,
   "facilityType": "공공용시설",
-  "areaM2": 3116.0,
+  "areaM2": 3116,
   "rampAvailable": null
  },
  {
@@ -456,7 +497,7 @@
   "latitude": 37.369868,
   "longitude": 126.802405,
   "facilityType": "공공용시설",
-  "areaM2": 8396.0,
+  "areaM2": 8396,
   "rampAvailable": null
  },
  {
@@ -466,7 +507,7 @@
   "latitude": 37.446684,
   "longitude": 126.796285,
   "facilityType": "공공용시설",
-  "areaM2": 3247.0,
+  "areaM2": 3247,
   "rampAvailable": null
  },
  {
@@ -476,7 +517,7 @@
   "latitude": 37.37528,
   "longitude": 126.84217,
   "facilityType": "공공용시설",
-  "areaM2": 18471.0,
+  "areaM2": 18471,
   "rampAvailable": null
  },
  {
@@ -486,7 +527,7 @@
   "latitude": 37.444123,
   "longitude": 126.793259,
   "facilityType": "공공용시설",
-  "areaM2": 4501.0,
+  "areaM2": 4501,
   "rampAvailable": null
  },
  {
@@ -496,7 +537,7 @@
   "latitude": 37.41571,
   "longitude": 126.815011,
   "facilityType": "공공용시설",
-  "areaM2": 661.0,
+  "areaM2": 661,
   "rampAvailable": null
  },
  {
@@ -506,7 +547,7 @@
   "latitude": 37.394935,
   "longitude": 126.812654,
   "facilityType": "공공용시설",
-  "areaM2": 5172.0,
+  "areaM2": 5172,
   "rampAvailable": null
  },
  {
@@ -516,7 +557,7 @@
   "latitude": 37.437675,
   "longitude": 126.79171,
   "facilityType": "공공용시설",
-  "areaM2": 16815.0,
+  "areaM2": 16815,
   "rampAvailable": null
  },
  {
@@ -526,7 +567,7 @@
   "latitude": 37.442589,
   "longitude": 126.792804,
   "facilityType": "공공용시설",
-  "areaM2": 6811.0,
+  "areaM2": 6811,
   "rampAvailable": null
  },
  {
@@ -536,7 +577,7 @@
   "latitude": 37.399751,
   "longitude": 126.801814,
   "facilityType": "공공용시설",
-  "areaM2": 7935.0,
+  "areaM2": 7935,
   "rampAvailable": null
  },
  {
@@ -546,7 +587,7 @@
   "latitude": 37.38446,
   "longitude": 126.857629,
   "facilityType": "공공용시설",
-  "areaM2": 930.0,
+  "areaM2": 930,
   "rampAvailable": null
  },
  {
@@ -556,7 +597,7 @@
   "latitude": 37.353636,
   "longitude": 126.730807,
   "facilityType": "공공용시설",
-  "areaM2": 2688.0,
+  "areaM2": 2688,
   "rampAvailable": null
  },
  {
@@ -566,7 +607,7 @@
   "latitude": 37.357454,
   "longitude": 126.725262,
   "facilityType": "공공용시설",
-  "areaM2": 7850.0,
+  "areaM2": 7850,
   "rampAvailable": null
  },
  {
@@ -576,7 +617,7 @@
   "latitude": 37.370651,
   "longitude": 126.813271,
   "facilityType": "공공용시설",
-  "areaM2": 8294.0,
+  "areaM2": 8294,
   "rampAvailable": null
  },
  {
@@ -586,7 +627,7 @@
   "latitude": 37.366812,
   "longitude": 126.811803,
   "facilityType": "공공용시설",
-  "areaM2": 12205.0,
+  "areaM2": 12205,
   "rampAvailable": null
  },
  {
@@ -596,7 +637,7 @@
   "latitude": 37.349301,
   "longitude": 126.760627,
   "facilityType": "공공용시설",
-  "areaM2": 40688.0,
+  "areaM2": 40688,
   "rampAvailable": null
  },
  {
@@ -606,7 +647,7 @@
   "latitude": 37.445657,
   "longitude": 126.794226,
   "facilityType": "공공용시설",
-  "areaM2": 6547.0,
+  "areaM2": 6547,
   "rampAvailable": null
  },
  {
@@ -616,7 +657,7 @@
   "latitude": 37.435153,
   "longitude": 126.791332,
   "facilityType": "공공용시설",
-  "areaM2": 12124.0,
+  "areaM2": 12124,
   "rampAvailable": null
  },
  {
@@ -626,7 +667,7 @@
   "latitude": 37.36493,
   "longitude": 126.816204,
   "facilityType": "공공용시설",
-  "areaM2": 18628.0,
+  "areaM2": 18628,
   "rampAvailable": null
  },
  {
@@ -636,7 +677,7 @@
   "latitude": 37.408592,
   "longitude": 126.784972,
   "facilityType": "공공용시설",
-  "areaM2": 2570.0,
+  "areaM2": 2570,
   "rampAvailable": null
  },
  {
@@ -646,7 +687,7 @@
   "latitude": 37.354113,
   "longitude": 126.718729,
   "facilityType": "공공용시설",
-  "areaM2": 5736.0,
+  "areaM2": 5736,
   "rampAvailable": null
  },
  {
@@ -656,7 +697,7 @@
   "latitude": 37.388188,
   "longitude": 126.860701,
   "facilityType": "공공용시설",
-  "areaM2": 661.0,
+  "areaM2": 661,
   "rampAvailable": null
  },
  {
@@ -666,7 +707,7 @@
   "latitude": 37.4174,
   "longitude": 126.809696,
   "facilityType": "공공용시설",
-  "areaM2": 3792.0,
+  "areaM2": 3792,
   "rampAvailable": null
  },
  {
@@ -676,7 +717,7 @@
   "latitude": 37.360573,
   "longitude": 126.733232,
   "facilityType": "공공용시설",
-  "areaM2": 4221.0,
+  "areaM2": 4221,
   "rampAvailable": null
  },
  {
@@ -686,7 +727,7 @@
   "latitude": 37.408378,
   "longitude": 126.786802,
   "facilityType": "공공용시설",
-  "areaM2": 1101.0,
+  "areaM2": 1101,
   "rampAvailable": null
  },
  {
@@ -696,7 +737,7 @@
   "latitude": 37.380494,
   "longitude": 126.799569,
   "facilityType": "공공용시설",
-  "areaM2": 4387.0,
+  "areaM2": 4387,
   "rampAvailable": null
  },
  {
@@ -706,7 +747,7 @@
   "latitude": 37.418321,
   "longitude": 126.811474,
   "facilityType": "공공용시설",
-  "areaM2": 3363.0,
+  "areaM2": 3363,
   "rampAvailable": null
  },
  {
@@ -716,7 +757,7 @@
   "latitude": 37.363204,
   "longitude": 126.815198,
   "facilityType": "공공용시설",
-  "areaM2": 14691.0,
+  "areaM2": 14691,
   "rampAvailable": null
  },
  {
@@ -726,7 +767,7 @@
   "latitude": 37.350908,
   "longitude": 126.725983,
   "facilityType": "공공용시설",
-  "areaM2": 4434.0,
+  "areaM2": 4434,
   "rampAvailable": null
  },
  {
@@ -736,7 +777,7 @@
   "latitude": 37.394937,
   "longitude": 126.85558,
   "facilityType": "공공용시설",
-  "areaM2": 1873.0,
+  "areaM2": 1873,
   "rampAvailable": null
  },
  {
@@ -746,7 +787,7 @@
   "latitude": 37.370912,
   "longitude": 126.811026,
   "facilityType": "공공용시설",
-  "areaM2": 8885.0,
+  "areaM2": 8885,
   "rampAvailable": null
  },
  {
@@ -756,7 +797,7 @@
   "latitude": 37.373799,
   "longitude": 126.854593,
   "facilityType": "공공용시설",
-  "areaM2": 26704.0,
+  "areaM2": 26704,
   "rampAvailable": null
  },
  {
@@ -766,7 +807,7 @@
   "latitude": 37.413027,
   "longitude": 126.840248,
   "facilityType": "공공용시설",
-  "areaM2": 825.0,
+  "areaM2": 825,
   "rampAvailable": null
  },
  {
@@ -776,7 +817,7 @@
   "latitude": 37.389945,
   "longitude": 126.7387,
   "facilityType": "공공용시설",
-  "areaM2": 36930.0,
+  "areaM2": 36930,
   "rampAvailable": null
  },
  {
@@ -796,7 +837,7 @@
   "latitude": 37.372889,
   "longitude": 126.809932,
   "facilityType": "공공용시설",
-  "areaM2": 25073.0,
+  "areaM2": 25073,
   "rampAvailable": null
  },
  {
@@ -806,7 +847,7 @@
   "latitude": 37.36881,
   "longitude": 126.725746,
   "facilityType": "공공용시설",
-  "areaM2": 41187.0,
+  "areaM2": 41187,
   "rampAvailable": null
  },
  {
@@ -816,7 +857,7 @@
   "latitude": 37.377264,
   "longitude": 126.781271,
   "facilityType": "공공용시설",
-  "areaM2": 12238.0,
+  "areaM2": 12238,
   "rampAvailable": null
  },
  {
@@ -826,7 +867,7 @@
   "latitude": 37.357476,
   "longitude": 126.721151,
   "facilityType": "공공용시설",
-  "areaM2": 5321.0,
+  "areaM2": 5321,
   "rampAvailable": null
  },
  {
@@ -836,7 +877,7 @@
   "latitude": 37.439608,
   "longitude": 126.806055,
   "facilityType": "공공용시설",
-  "areaM2": 38264.0,
+  "areaM2": 38264,
   "rampAvailable": null
  },
  {
@@ -846,7 +887,7 @@
   "latitude": 37.350731,
   "longitude": 126.731997,
   "facilityType": "공공용시설",
-  "areaM2": 8367.0,
+  "areaM2": 8367,
   "rampAvailable": null
  },
  {
@@ -856,7 +897,7 @@
   "latitude": 37.357467,
   "longitude": 126.774271,
   "facilityType": "공공용시설",
-  "areaM2": 15272.0,
+  "areaM2": 15272,
   "rampAvailable": null
  },
  {
@@ -866,7 +907,7 @@
   "latitude": 37.393531,
   "longitude": 126.806261,
   "facilityType": "공공용시설",
-  "areaM2": 19906.0,
+  "areaM2": 19906,
   "rampAvailable": null
  },
  {
@@ -876,7 +917,7 @@
   "latitude": 37.321233,
   "longitude": 126.690843,
   "facilityType": "공공용시설",
-  "areaM2": 32014.0,
+  "areaM2": 32014,
   "rampAvailable": null
  },
  {
@@ -886,7 +927,7 @@
   "latitude": 37.341042,
   "longitude": 126.78427,
   "facilityType": "공공용시설",
-  "areaM2": 3205.0,
+  "areaM2": 3205,
   "rampAvailable": null
  },
  {
@@ -896,7 +937,7 @@
   "latitude": 37.437736,
   "longitude": 126.788186,
   "facilityType": "공공용시설",
-  "areaM2": 1834.0,
+  "areaM2": 1834,
   "rampAvailable": null
  },
  {
@@ -906,7 +947,7 @@
   "latitude": 37.344449,
   "longitude": 126.782044,
   "facilityType": "공공용시설",
-  "areaM2": 1683.0,
+  "areaM2": 1683,
   "rampAvailable": null
  },
  {
@@ -916,7 +957,7 @@
   "latitude": 37.365209,
   "longitude": 126.734325,
   "facilityType": "공공용시설",
-  "areaM2": 4430.0,
+  "areaM2": 4430,
   "rampAvailable": null
  },
  {
@@ -926,7 +967,7 @@
   "latitude": 37.341368,
   "longitude": 126.741463,
   "facilityType": "공공용시설",
-  "areaM2": 8816.0,
+  "areaM2": 8816,
   "rampAvailable": null
  },
  {
@@ -936,7 +977,7 @@
   "latitude": 37.393385,
   "longitude": 126.739986,
   "facilityType": "공공용시설",
-  "areaM2": 38663.0,
+  "areaM2": 38663,
   "rampAvailable": null
  },
  {
@@ -946,7 +987,7 @@
   "latitude": 37.345547,
   "longitude": 126.782575,
   "facilityType": "공공용시설",
-  "areaM2": 726.0,
+  "areaM2": 726,
   "rampAvailable": null
  },
  {
@@ -956,7 +997,7 @@
   "latitude": 37.440302,
   "longitude": 126.79727,
   "facilityType": "공공용시설",
-  "areaM2": 41770.0,
+  "areaM2": 41770,
   "rampAvailable": null
  },
  {
@@ -966,7 +1007,7 @@
   "latitude": 37.445958,
   "longitude": 126.799254,
   "facilityType": "공공용시설",
-  "areaM2": 7243.0,
+  "areaM2": 7243,
   "rampAvailable": null
  },
  {
@@ -976,7 +1017,7 @@
   "latitude": 37.414256,
   "longitude": 126.814604,
   "facilityType": "공공용시설",
-  "areaM2": 2931.0,
+  "areaM2": 2931,
   "rampAvailable": null
  },
  {
@@ -986,7 +1027,7 @@
   "latitude": 37.359792,
   "longitude": 126.728006,
   "facilityType": "공공용시설",
-  "areaM2": 5190.0,
+  "areaM2": 5190,
   "rampAvailable": null
  },
  {
@@ -996,7 +1037,7 @@
   "latitude": 37.366652,
   "longitude": 126.812674,
   "facilityType": "공공용시설",
-  "areaM2": 9545.0,
+  "areaM2": 9545,
   "rampAvailable": null
  },
  {
@@ -1006,7 +1047,7 @@
   "latitude": 37.353872,
   "longitude": 126.734508,
   "facilityType": "공공용시설",
-  "areaM2": 4612.0,
+  "areaM2": 4612,
   "rampAvailable": null
  },
  {
@@ -1016,7 +1057,7 @@
   "latitude": 37.347689,
   "longitude": 126.730665,
   "facilityType": "공공용시설",
-  "areaM2": 5328.0,
+  "areaM2": 5328,
   "rampAvailable": null
  },
  {
@@ -1026,7 +1067,7 @@
   "latitude": 37.351299,
   "longitude": 126.74292,
   "facilityType": "공공용시설",
-  "areaM2": 1172.0,
+  "areaM2": 1172,
   "rampAvailable": null
  },
  {
@@ -1036,7 +1077,7 @@
   "latitude": 37.348328,
   "longitude": 126.785734,
   "facilityType": "공공용시설",
-  "areaM2": 6504.0,
+  "areaM2": 6504,
   "rampAvailable": null
  },
  {
@@ -1046,7 +1087,7 @@
   "latitude": 37.355509,
   "longitude": 126.723755,
   "facilityType": "공공용시설",
-  "areaM2": 2707.0,
+  "areaM2": 2707,
   "rampAvailable": null
  },
  {
@@ -1056,7 +1097,7 @@
   "latitude": 37.437628,
   "longitude": 126.780738,
   "facilityType": "공공용시설",
-  "areaM2": 2186.0,
+  "areaM2": 2186,
   "rampAvailable": null
  },
  {
@@ -1066,7 +1107,7 @@
   "latitude": 37.447513,
   "longitude": 126.794464,
   "facilityType": "공공용시설",
-  "areaM2": 2719.0,
+  "areaM2": 2719,
   "rampAvailable": null
  },
  {
@@ -1076,7 +1117,7 @@
   "latitude": 37.385918,
   "longitude": 126.742744,
   "facilityType": "공공용시설",
-  "areaM2": 15305.0,
+  "areaM2": 15305,
   "rampAvailable": null
  },
  {
@@ -1086,7 +1127,7 @@
   "latitude": 37.367281,
   "longitude": 126.808885,
   "facilityType": "공공용시설",
-  "areaM2": 5642.0,
+  "areaM2": 5642,
   "rampAvailable": null
  },
  {
@@ -1096,7 +1137,7 @@
   "latitude": 37.341245,
   "longitude": 126.744256,
   "facilityType": "공공용시설",
-  "areaM2": 2432.0,
+  "areaM2": 2432,
   "rampAvailable": null
  },
  {
@@ -1106,7 +1147,7 @@
   "latitude": 37.354373,
   "longitude": 126.735612,
   "facilityType": "공공용시설",
-  "areaM2": 2409.0,
+  "areaM2": 2409,
   "rampAvailable": null
  },
  {
@@ -1116,7 +1157,7 @@
   "latitude": 37.352433,
   "longitude": 126.729658,
   "facilityType": "공공용시설",
-  "areaM2": 6848.0,
+  "areaM2": 6848,
   "rampAvailable": null
  },
  {
@@ -1126,7 +1167,7 @@
   "latitude": 37.360808,
   "longitude": 126.730012,
   "facilityType": "공공용시설",
-  "areaM2": 1500.0,
+  "areaM2": 1500,
   "rampAvailable": null
  },
  {
@@ -1136,7 +1177,7 @@
   "latitude": 37.344836,
   "longitude": 126.783709,
   "facilityType": "공공용시설",
-  "areaM2": 620.0,
+  "areaM2": 620,
   "rampAvailable": null
  },
  {
@@ -1146,7 +1187,7 @@
   "latitude": 37.35596,
   "longitude": 126.719958,
   "facilityType": "공공용시설",
-  "areaM2": 6195.0,
+  "areaM2": 6195,
   "rampAvailable": null
  },
  {
@@ -1156,7 +1197,7 @@
   "latitude": 37.34694,
   "longitude": 126.700533,
   "facilityType": "공공용시설",
-  "areaM2": 2569.0,
+  "areaM2": 2569,
   "rampAvailable": null
  },
  {
@@ -1166,7 +1207,7 @@
   "latitude": 37.357098,
   "longitude": 126.730435,
   "facilityType": "공공용시설",
-  "areaM2": 3014.0,
+  "areaM2": 3014,
   "rampAvailable": null
  },
  {
@@ -1176,7 +1217,7 @@
   "latitude": 37.446446,
   "longitude": 126.79368,
   "facilityType": "공공용시설",
-  "areaM2": 3894.0,
+  "areaM2": 3894,
   "rampAvailable": null
  },
  {
@@ -1186,7 +1227,7 @@
   "latitude": 37.351115,
   "longitude": 126.743545,
   "facilityType": "공공용시설",
-  "areaM2": 649.0,
+  "areaM2": 649,
   "rampAvailable": null
  },
  {
@@ -1196,7 +1237,7 @@
   "latitude": 37.362592,
   "longitude": 126.713516,
   "facilityType": "공공용시설",
-  "areaM2": 111347.0,
+  "areaM2": 111347,
   "rampAvailable": null
  },
  {
@@ -1206,7 +1247,7 @@
   "latitude": 37.420807,
   "longitude": 126.797522,
   "facilityType": "공공용시설",
-  "areaM2": 1547.0,
+  "areaM2": 1547,
   "rampAvailable": null
  },
  {
@@ -1216,7 +1257,7 @@
   "latitude": 37.345721,
   "longitude": 126.783751,
   "facilityType": "공공용시설",
-  "areaM2": 917.0,
+  "areaM2": 917,
   "rampAvailable": null
  },
  {
@@ -1226,7 +1267,7 @@
   "latitude": 37.366226,
   "longitude": 126.81518,
   "facilityType": "공공용시설",
-  "areaM2": 15771.0,
+  "areaM2": 15771,
   "rampAvailable": null
  },
  {
@@ -1236,7 +1277,7 @@
   "latitude": 37.374233,
   "longitude": 126.725201,
   "facilityType": "공공용시설",
-  "areaM2": 47021.0,
+  "areaM2": 47021,
   "rampAvailable": null
  },
  {
@@ -1246,7 +1287,7 @@
   "latitude": 37.347712,
   "longitude": 126.760836,
   "facilityType": "공공용시설",
-  "areaM2": 23781.0,
+  "areaM2": 23781,
   "rampAvailable": null
  },
  {
@@ -1256,7 +1297,7 @@
   "latitude": 37.38845,
   "longitude": 126.740034,
   "facilityType": "공공용시설",
-  "areaM2": 1414.0,
+  "areaM2": 1414,
   "rampAvailable": null
  },
  {
@@ -1266,7 +1307,7 @@
   "latitude": 37.35187,
   "longitude": 126.740702,
   "facilityType": "공공용시설",
-  "areaM2": 4392.0,
+  "areaM2": 4392,
   "rampAvailable": null
  },
  {
@@ -1276,7 +1317,7 @@
   "latitude": 37.398824,
   "longitude": 126.801538,
   "facilityType": "공공용시설",
-  "areaM2": 12841.0,
+  "areaM2": 12841,
   "rampAvailable": null
  },
  {
@@ -1286,7 +1327,7 @@
   "latitude": 37.389215,
   "longitude": 126.734745,
   "facilityType": "공공용시설",
-  "areaM2": 11366.0,
+  "areaM2": 11366,
   "rampAvailable": null
  },
  {
@@ -1296,7 +1337,7 @@
   "latitude": 37.445821,
   "longitude": 126.794714,
   "facilityType": "공공용시설",
-  "areaM2": 4435.0,
+  "areaM2": 4435,
   "rampAvailable": null
  },
  {
@@ -1306,7 +1347,7 @@
   "latitude": 37.37952,
   "longitude": 126.803273,
   "facilityType": "공공용시설",
-  "areaM2": 3634.0,
+  "areaM2": 3634,
   "rampAvailable": null
  },
  {
@@ -1316,7 +1357,7 @@
   "latitude": 37.367257,
   "longitude": 126.735886,
   "facilityType": "공공용시설",
-  "areaM2": 6211.0,
+  "areaM2": 6211,
   "rampAvailable": null
  },
  {
@@ -1326,7 +1367,7 @@
   "latitude": 37.38051,
   "longitude": 126.785834,
   "facilityType": "공공용시설",
-  "areaM2": 16420.0,
+  "areaM2": 16420,
   "rampAvailable": null
  },
  {
@@ -1336,7 +1377,7 @@
   "latitude": 37.422343,
   "longitude": 126.796462,
   "facilityType": "공공용시설",
-  "areaM2": 2423.0,
+  "areaM2": 2423,
   "rampAvailable": null
  },
  {
@@ -1346,7 +1387,7 @@
   "latitude": 37.378134,
   "longitude": 126.785729,
   "facilityType": "공공용시설",
-  "areaM2": 16740.0,
+  "areaM2": 16740,
   "rampAvailable": null
  },
  {
@@ -1356,7 +1397,7 @@
   "latitude": 37.380656,
   "longitude": 126.779593,
   "facilityType": "공공용시설",
-  "areaM2": 11645.0,
+  "areaM2": 11645,
   "rampAvailable": null
  },
  {
@@ -1366,7 +1407,7 @@
   "latitude": 37.446693,
   "longitude": 126.792771,
   "facilityType": "공공용시설",
-  "areaM2": 488.0,
+  "areaM2": 488,
   "rampAvailable": null
  },
  {
@@ -1376,7 +1417,7 @@
   "latitude": 37.430848,
   "longitude": 126.795835,
   "facilityType": "공공용시설",
-  "areaM2": 5358.0,
+  "areaM2": 5358,
   "rampAvailable": null
  },
  {
@@ -1386,7 +1427,7 @@
   "latitude": 37.351824,
   "longitude": 126.716036,
   "facilityType": "공공용시설",
-  "areaM2": 21495.0,
+  "areaM2": 21495,
   "rampAvailable": null
  },
  {
@@ -1396,7 +1437,7 @@
   "latitude": 37.43443,
   "longitude": 126.787481,
   "facilityType": "공공용시설",
-  "areaM2": 403.0,
+  "areaM2": 403,
   "rampAvailable": null
  }
 ]

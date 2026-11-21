@@ -81,8 +81,8 @@ export default function Shelters() {
       <h1>가까운 대피소</h1>
       {wheelchair && (
         <p className="notice small">
-          공공데이터에는 경사로 정보가 없어요.
-          이동하기 전에 시설에 꼭 확인하세요.
+          ♿ 표시는 장애인편의시설 공공데이터에 <b>주출입구 높이차이 제거</b>(경사로 등)가 등록된 곳이에요.
+          표시가 없는 곳은 정보가 없는 거예요. 대피 공간(지하주차장)까지 갈 수 있는지는 현장에서 꼭 확인하세요.
         </p>
       )}
 
@@ -100,7 +100,7 @@ export default function Shelters() {
               ? '현재 위치 기준 거리예요.'
               : '위치를 확인할 수 없어 시흥시 중심 기준으로 보여드려요.'}
             <br />
-            <span className="muted">출처: {result.source ?? DATA_SOURCE}</span>
+            <span className="muted">출처: {result.source ?? DATA_SOURCE}, 접근성: 한국사회보장정보원 장애인편의시설 현황</span>
           </div>
 
           {result.items.length === 0 && (
@@ -117,8 +117,13 @@ export default function Shelters() {
                 <p className="muted small">{s.address}</p>
                 <div className="shelter-tags">
                   {s.facilityType && <span className="badge">{s.facilityType}</span>}
-                  {s.rampAvailable && <span className="badge">♿ 경사로</span>}
+                  {s.rampAvailable && <span className="badge ramp">♿ 높이차이 제거</span>}
                 </div>
+                {s.accessibility?.features?.length > 0 && (
+                  <p className="muted small access-info">
+                    편의시설 등록: {s.accessibility.features.join(', ')}
+                  </p>
+                )}
                 <div className="shelter-actions">
                   <a className="btn-primary" href={s.mapUrl} target="_blank" rel="noreferrer">
                     길찾기
